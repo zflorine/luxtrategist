@@ -297,7 +297,7 @@ function Index() {
               >
                 Request a quote <ArrowRight aria-hidden="true" />
               </Button>
-            </article>
+          </article>
           </div>
 
           {/* additional work */}
@@ -314,6 +314,37 @@ function Index() {
               $500
               <span className="text-lg text-ink/50">/hour</span>
             </span>
+          </div>
+        </section>
+
+        {/* testimonials */}
+        <section className="pb-24 pt-4">
+          <div className="border-t border-ink/15 pt-14">
+            <h2 className="font-display text-4xl text-ink sm:text-5xl">
+              Testimonials
+            </h2>
+            <div className="mt-10 grid gap-6 md:grid-cols-2">
+              {testimonials.map((t) => (
+                <figure
+                  key={t.name}
+                  className="glass card-shadow flex flex-col rounded-3xl p-7"
+                >
+                  <blockquote className="flex-1">
+                    <p className="font-display text-lg leading-relaxed text-ink/85">
+                      &ldquo;{t.quote}&rdquo;
+                    </p>
+                  </blockquote>
+                  <figcaption className="mt-6 border-t border-white/60 pt-5">
+                    <p className="font-display text-base tracking-wide text-ink">
+                      {t.name}
+                    </p>
+                    <p className="mt-1 text-sm text-ink/65">
+                      {t.role} <span className="text-gold">·</span> {t.company}
+                    </p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </section>
 

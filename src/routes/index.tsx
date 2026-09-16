@@ -63,6 +63,37 @@ const partnerBullets = [
   "3-month initial engagement, auto-renews monthly",
 ];
 
+const testimonials = [
+  {
+    name: "HELENE PERSONNIC",
+    role: "International E-commerce Director",
+    company: "Hermès",
+    quote:
+      "Florine contributed to the launch of our hermes.cn website in China. I valued her in-depth knowledge of the Chinese digital market, her precision, her high standards, her discretion, and her overall flair for e-commerce and the online customer journey. She is a real pleasure to work with.",
+  },
+  {
+    name: "SEBASTIEN BELLECOURT",
+    role: "Digital Manager",
+    company: "Hermès",
+    quote:
+      "Florine has strong knowledge of e-commerce best-practices, UX and of course Chinese market. She has the ability to handle complex projects effortlessly. Florine earns my highest recommendation.",
+  },
+  {
+    name: "BRICE DIEULOT",
+    role: "e-Business Commercial Director",
+    company: "Moët Hennessy",
+    quote:
+      "Florine is rigorous, technically minded and curious. She carried out every task I entrusted to her with diligence and enthusiasm, and brought a great deal to the team - many thanks to her!",
+  },
+  {
+    name: "CHRISTEL HENNION",
+    role: "Marketing & Digital Director",
+    company: "Petit Bateau",
+    quote:
+      "Throughout her time with us, Florine ZHAO demonstrated rigour, autonomy, versatility and excellent time and project management skills.",
+  },
+];
+
 function Bullet({
   children,
   accent = "bg-turq",

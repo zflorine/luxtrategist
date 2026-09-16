@@ -1,4 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useServerFn } from "@tanstack/react-start";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { useState, type FormEvent } from "react";
+
+import { Button } from "@/components/ui/button";
+import { submitQuoteRequest } from "@/lib/quote.functions";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -73,8 +79,45 @@ function Bullet({
 }
 
 function Index() {
+  const submitQuote = useServerFn(submitQuoteRequest);
+  const [selectedService, setSelectedService] = useState("Flash");
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const requestQuote = (service: string) => {
+    setSelectedService(service);
+    document.getElementById("request-quote")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setStatus("submitting");
+    setErrorMessage("");
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      await submitQuote({
+        data: {
+          service: selectedService as "Flash" | "Advisory" | "Partner",
+          name: String(formData.get("name") ?? ""),
+          email: String(formData.get("email") ?? ""),
+          company: String(formData.get("company") ?? ""),
+          message: String(formData.get("message") ?? ""),
+          website: String(formData.get("website") ?? ""),
+        },
+      });
+      form.reset();
+      setStatus("success");
+    } catch (error) {
+      setErrorMessage(error instanceof Error ? error.message : "Your request could not be sent.");
+      setStatus("error");
+    }
+  };
+
   return (
-    <div className="relative min-h-screen overflow-hidden bg-white font-body text-ink antialiased">
+    <main className="relative min-h-screen overflow-hidden bg-background font-body text-ink antialiased">
       {/* decorative background */}
       <div
         className="pointer-events-none absolute inset-0"
@@ -180,14 +223,17 @@ function Index() {
                   <Bullet key={b}>{b}</Bullet>
                 ))}
               </ul>
+              <Button
+                type="button"
+                onClick={() => requestQuote("Flash")}
+                className="mt-auto min-h-11 w-full bg-ink pt-3 text-background hover:bg-ink/90"
+              >
+                Request a quote <ArrowRight aria-hidden="true" />
+              </Button>
             </article>
 
             {/* Advisory (featured) */}
-            <article
-              className="relative flex flex-col rounded-3xl p-px"
-              style={{ background: "linear-gradient(150deg,#0FA7A0,#C6A15A)" }}
-            >
-              <div className="glass flex flex-1 flex-col rounded-[23px] p-7">
+            <article className="glass card-shadow flex flex-col rounded-3xl border border-turq/35 p-7">
                 <p className="font-display text-3xl text-ink">Advisory</p>
                 <p className="mt-1 font-display text-3xl text-gold">
                   $3,200
@@ -210,7 +256,13 @@ function Index() {
                     (Up to 8 hours/month of reserved senior advisory capacity)
                   </p>
                 </div>
-              </div>
+                <Button
+                  type="button"
+                  onClick={() => requestQuote("Advisory")}
+                  className="mt-auto min-h-11 w-full bg-turq pt-3 text-background hover:bg-turq/90"
+                >
+                  Request a quote <ArrowRight aria-hidden="true" />
+                </Button>
             </article>
 
             {/* Partner */}
@@ -238,6 +290,13 @@ function Index() {
                   (Up to 28 hours/month of reserved senior advisory capacity)
                 </p>
               </div>
+              <Button
+                type="button"
+                onClick={() => requestQuote("Partner")}
+                className="mt-auto min-h-11 w-full bg-ink pt-3 text-background hover:bg-ink/90"
+              >
+                Request a quote <ArrowRight aria-hidden="true" />
+              </Button>
             </article>
           </div>
 
@@ -257,6 +316,98 @@ function Index() {
             </span>
           </div>
         </section>
+
+        <section id="request-quote" className="scroll-mt-8 pb-24 pt-4">
+          <div className="grid gap-10 border-t border-ink/15 pt-14 lg:grid-cols-12">
+            <div className="lg:col-span-5">
+              <h2 className="font-display text-4xl text-ink sm:text-5xl">Request a quote</h2>
+              <p className="mt-5 max-w-md text-base leading-relaxed text-ink/70">
+                Share the decision, deliverable, or strategic question you need reviewed.
+              </p>
+            </div>
+
+            <form className="space-y-5 lg:col-span-7" onSubmit={handleSubmit}>
+              <div className="grid gap-5 sm:grid-cols-2">
+                <label className="text-sm font-semibold text-ink">
+                  Name
+                  <input
+                    name="name"
+                    required
+                    maxLength={100}
+                    autoComplete="name"
+                    className="mt-2 min-h-12 w-full rounded-lg border border-ink/20 bg-background px-4 font-normal text-ink outline-none transition focus:border-turq focus:ring-2 focus:ring-turq/20"
+                  />
+                </label>
+                <label className="text-sm font-semibold text-ink">
+                  Work email
+                  <input
+                    name="email"
+                    type="email"
+                    required
+                    maxLength={255}
+                    autoComplete="email"
+                    className="mt-2 min-h-12 w-full rounded-lg border border-ink/20 bg-background px-4 font-normal text-ink outline-none transition focus:border-turq focus:ring-2 focus:ring-turq/20"
+                  />
+                </label>
+                <label className="text-sm font-semibold text-ink">
+                  Company <span className="font-normal text-ink/60">(optional)</span>
+                  <input
+                    name="company"
+                    maxLength={150}
+                    autoComplete="organization"
+                    className="mt-2 min-h-12 w-full rounded-lg border border-ink/20 bg-background px-4 font-normal text-ink outline-none transition focus:border-turq focus:ring-2 focus:ring-turq/20"
+                  />
+                </label>
+                <label className="text-sm font-semibold text-ink">
+                  Service
+                  <select
+                    value={selectedService}
+                    onChange={(event) => setSelectedService(event.target.value)}
+                    className="mt-2 min-h-12 w-full rounded-lg border border-ink/20 bg-background px-4 font-normal text-ink outline-none transition focus:border-turq focus:ring-2 focus:ring-turq/20"
+                  >
+                    <option>Flash</option>
+                    <option>Advisory</option>
+                    <option>Partner</option>
+                  </select>
+                </label>
+              </div>
+              <label className="block text-sm font-semibold text-ink">
+                What would you like reviewed?
+                <textarea
+                  name="message"
+                  required
+                  minLength={10}
+                  maxLength={2000}
+                  rows={6}
+                  className="mt-2 w-full resize-y rounded-lg border border-ink/20 bg-background px-4 py-3 font-normal text-ink outline-none transition focus:border-turq focus:ring-2 focus:ring-turq/20"
+                />
+              </label>
+              <label className="sr-only" aria-hidden="true">
+                Website
+                <input name="website" tabIndex={-1} autoComplete="off" />
+              </label>
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                <Button
+                  type="submit"
+                  disabled={status === "submitting"}
+                  className="min-h-12 bg-ink px-7 text-background hover:bg-ink/90"
+                >
+                  {status === "submitting" ? "Sending…" : "Send request"}
+                  {status !== "submitting" && <ArrowRight aria-hidden="true" />}
+                </Button>
+                <div aria-live="polite" className="text-sm">
+                  {status === "success" && (
+                    <p className="flex items-center gap-2 font-semibold text-turq">
+                      <CheckCircle2 aria-hidden="true" className="size-5" />
+                      Your request has been received.
+                    </p>
+                  )}
+                  {status === "error" && <p className="text-destructive">{errorMessage}</p>}
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
       </div>
 
       {/* footer */}
@@ -270,6 +421,6 @@ function Index() {
           </span>
         </div>
       </footer>
-    </div>
+    </main>
   );
 }

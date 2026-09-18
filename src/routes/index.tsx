@@ -5,6 +5,9 @@ import { useState, type FormEvent } from "react";
 
 import { Button } from "@/components/ui/button";
 import { submitQuoteRequest } from "@/lib/quote.functions";
+import logoHermes from "@/assets/logo-hermes.png";
+import logoMoet from "@/assets/logo-moet.png";
+import logoPetitBateau from "@/assets/logo-petitbateau.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -68,6 +71,7 @@ const testimonials = [
     name: "HELENE PERSONNIC",
     role: "International E-commerce Director",
     company: "Hermès",
+    logo: logoHermes,
     quote:
       "Florine contributed to the launch of our hermes.cn website in China. I valued her in-depth knowledge of the Chinese digital market, her precision, her high standards, her discretion, and her overall flair for e-commerce and the online customer journey. She is a real pleasure to work with.",
   },
@@ -75,6 +79,7 @@ const testimonials = [
     name: "SEBASTIEN BELLECOURT",
     role: "Digital Manager",
     company: "Hermès",
+    logo: logoHermes,
     quote:
       "Florine has strong knowledge of e-commerce best-practices, UX and of course Chinese market. She has the ability to handle complex projects effortlessly. Florine earns my highest recommendation.",
   },
@@ -82,6 +87,7 @@ const testimonials = [
     name: "BRICE DIEULOT",
     role: "e-Business Commercial Director",
     company: "Moët Hennessy",
+    logo: logoMoet,
     quote:
       "Florine is rigorous, technically minded and curious. She carried out every task I entrusted to her with diligence and enthusiasm, and brought a great deal to the team - many thanks to her!",
   },
@@ -89,6 +95,7 @@ const testimonials = [
     name: "CHRISTEL HENNION",
     role: "Marketing & Digital Director",
     company: "Petit Bateau",
+    logo: logoPetitBateau,
     quote:
       "Throughout her time with us, Florine ZHAO demonstrated rigour, autonomy, versatility and excellent time and project management skills.",
   },
@@ -392,13 +399,23 @@ function Index() {
                       &ldquo;{t.quote}&rdquo;
                     </p>
                   </blockquote>
-                  <figcaption className="mt-6 border-t border-white/60 pt-5">
-                    <p className="font-display text-base tracking-wide text-ink">
-                      {t.name}
-                    </p>
-                    <p className="mt-1 text-sm text-ink/65">
-                      {t.role} <span className="text-gold">·</span> {t.company}
-                    </p>
+                  <figcaption className="mt-6 flex items-end justify-between gap-4 border-t border-white/60 pt-5">
+                    <div>
+                      <p className="font-display text-base tracking-wide text-ink">
+                        {t.name}
+                      </p>
+                      <p className="mt-1 text-sm text-ink/65">
+                        {t.role} <span className="text-gold">·</span> {t.company}
+                      </p>
+                    </div>
+                    <img
+                      src={t.logo}
+                      alt={`${t.company} logo`}
+                      loading="lazy"
+                      width={1152}
+                      height={576}
+                      className="h-8 w-auto shrink-0 object-contain opacity-70 grayscale"
+                    />
                   </figcaption>
                 </figure>
               ))}

@@ -399,7 +399,17 @@ function Index() {
                       &ldquo;{t.quote}&rdquo;
                     </p>
                   </blockquote>
-                  <figcaption className="mt-6 flex items-end justify-between gap-4 border-t border-white/60 pt-5">
+                  <figcaption className="mt-6 flex items-center gap-4 border-t border-white/60 pt-5">
+                    <span className="grid size-14 shrink-0 place-items-center overflow-hidden rounded-full bg-white/70 ring-1 ring-ink/10">
+                      <img
+                        src={t.logo}
+                        alt={`${t.company} logo`}
+                        loading="lazy"
+                        width={1152}
+                        height={576}
+                        className="h-10 w-10 object-contain opacity-80 grayscale"
+                      />
+                    </span>
                     <div>
                       <p className="font-display text-base tracking-wide text-ink">
                         {t.name}
@@ -408,14 +418,6 @@ function Index() {
                         {t.role} <span className="text-gold">·</span> {t.company}
                       </p>
                     </div>
-                    <img
-                      src={t.logo}
-                      alt={`${t.company} logo`}
-                      loading="lazy"
-                      width={1152}
-                      height={576}
-                      className="h-11 w-auto shrink-0 object-contain opacity-70 grayscale"
-                    />
                   </figcaption>
                 </figure>
               ))}

@@ -225,7 +225,34 @@ function Index() {
                   and Petit Bateau.
                 </p>
                 <div className="mt-6 space-y-3 border-t border-white/60 pt-6">
-                  <p className="text-sm text-ink/80">
+                  <p className="text-sm font-semibold text-ink">
+                    My areas of expertise include:
+                  </p>
+                  <ul className="space-y-2 text-sm text-ink/80">
+                    <li className="flex gap-2.5">
+                      <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-turq" />
+                      <span>Digital & AI strategy</span>
+                    </li>
+                    <li className="flex gap-2.5">
+                      <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-turq" />
+                      <span>E-commerce, UX/CRO & SEO/GEO</span>
+                    </li>
+                    <li className="flex gap-2.5">
+                      <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-turq" />
+                      <span>China digital ecosystems & localization</span>
+                    </li>
+                    <li className="flex gap-2.5">
+                      <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-turq" />
+                      <span>Omnichannel & customer experience</span>
+                    </li>
+                    <li className="flex gap-2.5">
+                      <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-turq" />
+                      <span>
+                        Strategic review of AI and agency deliverables
+                      </span>
+                    </li>
+                  </ul>
+                  <p className="pt-2 text-sm text-ink/80">
                     Fully independent. No implementation. No vendor interests.
                   </p>
                   <p className="text-sm text-ink/80">

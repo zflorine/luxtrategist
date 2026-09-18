@@ -414,7 +414,7 @@ function Index() {
                       loading="lazy"
                       width={1152}
                       height={576}
-                      className="h-8 w-auto shrink-0 object-contain opacity-70 grayscale"
+                      className="h-11 w-auto shrink-0 object-contain opacity-70 grayscale"
                     />
                   </figcaption>
                 </figure>

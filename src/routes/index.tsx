@@ -238,32 +238,6 @@ function Index() {
           </div>
         </section>
 
-        {/* expertise */}
-        <section className="pb-20">
-          <div className="border-t border-ink/15 pt-14">
-            <h2 className="font-display text-4xl text-ink sm:text-5xl">
-              My areas of expertise include:
-            </h2>
-            <ul className="mt-8 grid gap-4 sm:grid-cols-2">
-              {[
-                "Digital & AI strategy",
-                "E-commerce, UX/CRO & SEO/GEO",
-                "China digital ecosystems & localization",
-                "Omnichannel & customer experience",
-                "Strategic review of AI and agency deliverables",
-              ].map((item) => (
-                <li
-                  key={item}
-                  className="glass card-shadow flex items-center gap-3 rounded-2xl px-5 py-4"
-                >
-                  <span className="mt-0 size-1.5 shrink-0 rounded-full bg-turq" />
-                  <span className="font-display text-lg text-ink/85">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
         {/* engagements */}
         <section className="pb-20">
           <div className="grid gap-6 md:grid-cols-3">

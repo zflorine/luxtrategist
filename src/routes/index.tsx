@@ -226,13 +226,14 @@ function Index() {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="glass card-shadow overflow-hidden rounded-3xl p-7">
+              <div className="space-y-6">
                 <img
                   src={florinePortrait.url}
                   alt="Florine Zhao — Independent Strategic Review"
                   loading="lazy"
-                  className="mb-6 h-60 w-full rounded-2xl object-cover object-top grayscale"
+                  className="aspect-[2/3] w-full rounded-3xl object-cover object-top grayscale ring-1 ring-ink/10"
                 />
+                <div className="glass card-shadow rounded-3xl p-7">
                 <p className="font-display text-2xl leading-tight text-ink">
                   16 years of global e-business experience across fashion and
                   luxury, including Louis Vuitton, Hermès, Dior, Moët Hennessy
@@ -273,6 +274,7 @@ function Index() {
                     I don't create another layer of work. I help you avoid
                     approving the wrong one.
                   </p>
+                </div>
                 </div>
               </div>
             </div>

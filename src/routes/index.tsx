@@ -8,6 +8,7 @@ import { submitQuoteRequest } from "@/lib/quote.functions";
 import logoHermes from "@/assets/logo-hermes.png";
 import logoMoet from "@/assets/logo-moet.png";
 import logoPetitBateau from "@/assets/logo-petitbateau.png";
+import florinePortrait from "@/assets/florine-portrait.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -225,7 +226,13 @@ function Index() {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="glass card-shadow rounded-3xl p-7">
+              <div className="glass card-shadow overflow-hidden rounded-3xl p-7">
+                <img
+                  src={florinePortrait.url}
+                  alt="Florine Zhao — Independent Strategic Review"
+                  loading="lazy"
+                  className="mb-6 h-60 w-full rounded-2xl object-cover object-top grayscale"
+                />
                 <p className="font-display text-2xl leading-tight text-ink">
                   16 years of global e-business experience across fashion and
                   luxury, including Louis Vuitton, Hermès, Dior, Moët Hennessy

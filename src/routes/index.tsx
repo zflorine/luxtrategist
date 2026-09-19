@@ -231,7 +231,7 @@ function Index() {
                   src={florinePortrait.url}
                   alt="Florine Zhao — Independent Strategic Review"
                   loading="lazy"
-                  className="aspect-[2/3] w-full rounded-3xl object-cover object-top grayscale ring-1 ring-ink/10"
+                  className="mx-auto aspect-[2/3] w-44 rounded-3xl object-cover object-top grayscale ring-1 ring-ink/10 sm:w-56 lg:w-64"
                 />
                 <div className="glass card-shadow rounded-3xl p-7">
                 <p className="font-display text-2xl leading-tight text-ink">

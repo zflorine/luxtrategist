@@ -275,6 +275,7 @@ function Index() {
                     approving the wrong one.
                   </p>
                 </div>
+                </div>
               </div>
             </div>
           </div>

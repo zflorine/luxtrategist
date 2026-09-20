@@ -423,9 +423,9 @@ function Index() {
                 <span
                   className={`grid shrink-0 place-items-center overflow-hidden rounded-full bg-white ring-1 ring-ink/10 ${
                     t.company === "Petit Bateau"
-                      ? "size-16"
+                      ? "size-20"
                       : t.company === "Hermès"
-                        ? "size-15"
+                        ? "size-18"
                         : "size-14"
                   }`}
                 >
@@ -435,12 +435,12 @@ function Index() {
                     loading="lazy"
                     width={1152}
                     height={576}
-                    className={`h-full w-full object-contain p-1.5 grayscale ${
+                    className={`h-full w-full object-contain grayscale ${
                       t.company === "Petit Bateau"
-                        ? "opacity-100"
+                        ? "p-1 opacity-100"
                         : t.company === "Hermès"
-                          ? "opacity-95"
-                          : "opacity-90"
+                          ? "p-1.5 opacity-95"
+                          : "p-1.5 opacity-90"
                     }`}
                   />
                 </span>

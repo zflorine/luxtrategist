@@ -67,6 +67,14 @@ const partnerBullets = [
   "3-month initial engagement, auto-renews monthly",
 ];
 
+const expertiseItems = [
+  { num: "01", title: "Digital & AI strategy", body: "Reviewing AI outputs, agency recommendations, and strategic deliverables." },
+  { num: "02", title: "E-commerce, UX/CRO & SEO/GEO", body: "Bridging Western headquarters and market realities." },
+  { num: "03", title: "China digital ecosystems & localization", body: "In-depth knowledge of the Chinese digital market." },
+  { num: "04", title: "Omnichannel & customer experience", body: "The online customer journey, end to end." },
+  { num: "05", title: "Strategic review of AI and agency deliverables", body: "An independent senior voice to challenge what they produce." },
+];
+
 const testimonials = [
   {
     name: "HELENE PERSONNIC",
@@ -102,19 +110,8 @@ const testimonials = [
   },
 ];
 
-function Bullet({
-  children,
-  accent = "bg-turq",
-}: {
-  children: React.ReactNode;
-  accent?: string;
-}) {
-  return (
-    <li className="flex gap-2.5">
-      <span className={`mt-1.5 size-1.5 shrink-0 rounded-full ${accent}`} />
-      <span>{children}</span>
-    </li>
-  );
+function scrollTo(id: string) {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 }
 
 function Index() {
@@ -125,7 +122,7 @@ function Index() {
 
   const requestQuote = (service: string) => {
     setSelectedService(service);
-    document.getElementById("request-quote")?.scrollIntoView({ behavior: "smooth" });
+    scrollTo("request-quote");
   };
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -156,349 +153,392 @@ function Index() {
   };
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-background font-body text-ink antialiased">
-      {/* decorative background */}
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(160deg,#fff 0%,#eef8f7 42%,#f5f0e3 100%)",
-        }}
-      />
-      <div
-        className="pointer-events-none absolute -top-16 -left-16 size-[480px] rounded-full"
-        style={{
-          background:
-            "radial-gradient(circle,rgba(15,167,160,0.4),transparent 70%)",
-        }}
-      />
-      <div
-        className="pointer-events-none absolute top-40 -right-24 size-[420px] rounded-full"
-        style={{
-          background:
-            "radial-gradient(circle,rgba(198,161,90,0.38),transparent 70%)",
-        }}
-      />
-      <div
-        className="pointer-events-none absolute bottom-0 left-1/3 size-[520px] rounded-full"
-        style={{
-          background:
-            "radial-gradient(circle,rgba(15,167,160,0.16),transparent 70%)",
-        }}
-      />
-
-      <div className="relative z-10 mx-auto max-w-6xl px-6 lg:px-10">
-        {/* header */}
-        <header className="flex items-center justify-between py-9">
-          <div className="flex items-center gap-3">
+    <main className="min-h-screen bg-white font-body text-ink antialiased selection:bg-turq/20">
+      {/* Header */}
+      <header className="sticky top-0 z-50 border-b border-ink/5 bg-white/95 backdrop-blur-sm">
+        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
+          <button
+            type="button"
+            onClick={() => scrollTo("top")}
+            className="flex items-center gap-3"
+          >
             <span
               className="grid size-9 place-items-center rounded-full text-[11px] font-semibold tracking-[0.15em] text-white"
               style={{ background: "#14201F" }}
             >
               SR
             </span>
-            <span className="font-display text-lg tracking-tight">
+            <span className="font-display text-lg font-bold tracking-tight">
               Independent Strategic Review
             </span>
-          </div>
-        </header>
-
-        {/* hero */}
-        <section className="pt-8 pb-16 lg:pt-14">
-          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
-            <div className="lg:col-span-7">
-              <h1 className="font-display text-[2.75rem] leading-[1.05] tracking-tight text-ink sm:text-6xl">
-                You already have the teams, agencies and AI tools.{" "}
-                <span className="italic text-turq">
-                  What you may be missing
-                </span>{" "}
-                is an independent senior voice to challenge what they produce.
-              </h1>
-              <p className="mt-8 max-w-xl text-base leading-relaxed text-ink/70">
-                I provide independent strategic second opinions for executives
-                in luxury, fashion and beauty.
-              </p>
-              <p className="mt-4 max-w-xl text-base leading-relaxed text-ink/70">
-                I review and challenge AI outputs, agency recommendations, and
-                strategic deliverables, bridging the gap between Western
-                headquarters and the realities of markets such as China.
-              </p>
-            </div>
-
-            <div className="lg:col-span-5">
-              <div className="space-y-6">
-                <img
-                  src={florinePortrait.url}
-                  alt="Florine Zhao — Independent Strategic Review"
-                  loading="lazy"
-                  className="mx-auto aspect-[2/3] w-44 rounded-3xl object-cover object-top grayscale ring-1 ring-ink/10 sm:w-56 lg:w-64"
-                />
-                <div className="glass card-shadow rounded-3xl p-7">
-                <p className="font-display text-2xl leading-tight text-ink">
-                  16 years of global e-business experience across fashion and
-                  luxury, including Louis Vuitton, Hermès, Dior, Moët Hennessy
-                  and Petit Bateau.
-                </p>
-                <div className="mt-6 space-y-3 border-t border-white/60 pt-6">
-                  <p className="text-sm font-semibold text-ink">
-                    My areas of expertise include:
-                  </p>
-                  <ul className="space-y-2 text-sm text-ink/80">
-                    <li className="flex gap-2.5">
-                      <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-turq" />
-                      <span>Digital & AI strategy</span>
-                    </li>
-                    <li className="flex gap-2.5">
-                      <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-turq" />
-                      <span>E-commerce, UX/CRO & SEO/GEO</span>
-                    </li>
-                    <li className="flex gap-2.5">
-                      <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-turq" />
-                      <span>China digital ecosystems & localization</span>
-                    </li>
-                    <li className="flex gap-2.5">
-                      <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-turq" />
-                      <span>Omnichannel & customer experience</span>
-                    </li>
-                    <li className="flex gap-2.5">
-                      <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-turq" />
-                      <span>
-                        Strategic review of AI and agency deliverables
-                      </span>
-                    </li>
-                  </ul>
-                  <p className="pt-2 text-sm text-ink/80">
-                    Fully independent. No implementation. No vendor interests.
-                  </p>
-                  <p className="text-sm text-ink/80">
-                    I don't create another layer of work. I help you avoid
-                    approving the wrong one.
-                  </p>
-                </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* engagements */}
-        <section className="pb-20">
-          <div className="grid gap-6 md:grid-cols-3">
-            {/* Flash */}
-            <article className="glass card-shadow flex flex-col rounded-3xl p-7">
-              <p className="font-display text-3xl text-ink">Flash</p>
-              <p className="mt-1 font-display text-3xl text-gold">$3,000</p>
-              <p className="mt-3 text-sm leading-relaxed text-ink/70">
-                For a high-stakes decision or deliverable requiring fast senior
-                judgment.
-              </p>
-              <ul className="mt-6 space-y-3 text-sm text-ink/80">
-                {flashBullets.map((b) => (
-                  <Bullet key={b}>{b}</Bullet>
-                ))}
-              </ul>
-              <Button
-                type="button"
-                onClick={() => requestQuote("Flash")}
-                className="mt-auto min-h-11 w-full bg-ink pt-3 text-background hover:bg-ink/90"
-              >
-                Request a quote <ArrowRight aria-hidden="true" />
-              </Button>
-            </article>
-
-            {/* Advisory (featured) */}
-            <article className="glass card-shadow flex flex-col rounded-3xl border border-turq/35 p-7">
-                <p className="font-display text-3xl text-ink">Advisory</p>
-                <p className="mt-1 font-display text-3xl text-gold">
-                  $3,200
-                  <span className="text-lg text-ink/50">/month</span>
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-ink/70">
-                  Your independent strategic second opinion, on a reserved basis.
-                </p>
-                <ul className="mt-6 space-y-3 text-sm text-ink/80">
-                  {advisoryBullets.map((b) => (
-                    <Bullet key={b}>{b}</Bullet>
-                  ))}
-                </ul>
-                <div className="mt-6 space-y-2 border-t border-white/60 pt-5">
-                  <p className="text-xs leading-relaxed text-ink/55">
-                    Does not include: implementation, project management,
-                    recurring team meetings, or production work.
-                  </p>
-                  <p className="text-xs leading-relaxed text-gold">
-                    (Up to 8 hours/month of reserved senior advisory capacity)
-                  </p>
-                </div>
-                <Button
-                  type="button"
-                  onClick={() => requestQuote("Advisory")}
-                  className="mt-auto min-h-11 w-full bg-turq pt-3 text-background hover:bg-turq/90"
-                >
-                  Request a quote <ArrowRight aria-hidden="true" />
-                </Button>
-            </article>
-
-            {/* Partner */}
-            <article className="glass card-shadow flex flex-col rounded-3xl p-7">
-              <p className="font-display text-3xl text-ink">Partner</p>
-              <p className="mt-1 font-display text-3xl text-gold">
-                $11,000
-                <span className="text-lg text-ink/50">/month</span>
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-ink/70">
-                Your external strategic quality gate.
-              </p>
-              <ul className="mt-6 space-y-3 text-sm text-ink/80">
-                {partnerBullets.map((b) => (
-                  <Bullet key={b} accent="bg-gold">
-                    {b}
-                  </Bullet>
-                ))}
-              </ul>
-              <div className="mt-6 space-y-2 border-t border-white/60 pt-5">
-                <p className="text-xs leading-relaxed text-ink/55">
-                  Not a fractional CMO, project manager, or implementation lead.
-                </p>
-                <p className="text-xs leading-relaxed text-gold">
-                  (Up to 28 hours/month of reserved senior advisory capacity)
-                </p>
-              </div>
-              <Button
-                type="button"
-                onClick={() => requestQuote("Partner")}
-                className="mt-auto min-h-11 w-full bg-ink pt-3 text-background hover:bg-ink/90"
-              >
-                Request a quote <ArrowRight aria-hidden="true" />
-              </Button>
-          </article>
-          </div>
-
-          {/* additional work */}
-          <div className="glass-soft mt-6 flex flex-col gap-3 rounded-2xl px-7 py-6 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <p className="font-display text-2xl text-ink">Additional work</p>
-              <p className="mt-2 max-w-[60ch] text-sm leading-relaxed text-ink/80">
-                Work outside the scope or reserved capacity of an engagement is
-                billed at $500/hour, subject to availability. Complex or
-                extensive reviews are scoped separately.
-              </p>
-            </div>
-            <span className="font-display shrink-0 text-4xl text-gold">
-              $500
-              <span className="text-lg text-ink/50">/hour</span>
-            </span>
-          </div>
-        </section>
-
-        {/* testimonials */}
-        <section className="pb-24 pt-4">
-          <div className="border-t border-ink/15 pt-14">
-            <h2 className="font-display text-4xl text-ink sm:text-5xl">
+          </button>
+          <nav className="hidden items-center gap-10 text-[10px] font-bold uppercase tracking-[0.2em] md:flex">
+            <button type="button" onClick={() => scrollTo("expertise")} className="text-ink/70 transition-colors hover:text-turq">
+              Expertise
+            </button>
+            <button type="button" onClick={() => scrollTo("engagements")} className="text-ink/70 transition-colors hover:text-turq">
+              Engagements
+            </button>
+            <button type="button" onClick={() => scrollTo("testimonials")} className="text-ink/70 transition-colors hover:text-turq">
               Testimonials
-            </h2>
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
-              {testimonials.map((t) => (
-                <figure
-                  key={t.name}
-                  className="glass card-shadow flex flex-col rounded-3xl p-7"
-                >
-                  <blockquote className="flex-1">
-                    <p className="font-display text-lg leading-relaxed text-ink/85">
-                      &ldquo;{t.quote}&rdquo;
-                    </p>
-                  </blockquote>
-                  <figcaption className="mt-6 flex items-center gap-4 border-t border-white/60 pt-5">
-                    <span className="grid size-14 shrink-0 place-items-center overflow-hidden rounded-full bg-white/70 ring-1 ring-ink/10">
-                      <img
-                        src={t.logo}
-                        alt={`${t.company} logo`}
-                        loading="lazy"
-                        width={1152}
-                        height={576}
-                        className="h-10 w-10 object-contain opacity-80 grayscale"
-                      />
-                    </span>
-                    <div>
-                      <p className="font-display text-base tracking-wide text-ink">
-                        {t.name}
-                      </p>
-                      <p className="mt-1 text-sm text-ink/65">
-                        {t.role} <span className="text-gold">·</span> {t.company}
-                      </p>
-                    </div>
-                  </figcaption>
-                </figure>
-              ))}
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollTo("request-quote")}
+              className="border border-gold px-6 py-3 text-gold transition-all hover:bg-gold hover:text-white"
+            >
+              Inquire
+            </button>
+          </nav>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section id="top" className="mx-auto max-w-7xl px-6 py-20 lg:py-32">
+        <div className="grid items-center gap-16 lg:grid-cols-2">
+          <div className="order-2 space-y-8 lg:order-1">
+            <div className="inline-flex items-center gap-4">
+              <span className="h-px w-8 bg-gold" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-gold">
+                Independent Senior Voice
+              </span>
+            </div>
+            <h1 className="font-display text-5xl leading-[1.1] text-ink lg:text-6xl">
+              You already have the teams, agencies and AI tools.{" "}
+              <span className="italic text-turq">What you may be missing</span>{" "}
+              is an independent senior voice to challenge what they produce.
+            </h1>
+            <p className="max-w-md text-lg leading-relaxed text-ink/70">
+              I provide independent strategic second opinions for executives in
+              luxury, fashion and beauty.
+            </p>
+            <p className="max-w-md text-lg leading-relaxed text-ink/70">
+              I review and challenge AI outputs, agency recommendations, and
+              strategic deliverables, bridging the gap between Western
+              headquarters and the realities of markets such as China.
+            </p>
+            <div className="pt-4">
+              <Button
+                type="button"
+                onClick={() => scrollTo("engagements")}
+                className="bg-ink px-10 py-5 text-xs font-bold uppercase tracking-[0.2em] hover:bg-turq"
+              >
+                View Engagements <ArrowRight aria-hidden="true" />
+              </Button>
             </div>
           </div>
-        </section>
 
-        <section id="request-quote" className="scroll-mt-8 pb-24 pt-4">
-          <div className="grid gap-10 border-t border-ink/15 pt-14 lg:grid-cols-12">
-            <div className="lg:col-span-5">
-              <h2 className="font-display text-4xl text-ink sm:text-5xl">Request a quote</h2>
-              <p className="mt-5 max-w-md text-base leading-relaxed text-ink/70">
-                Share the decision, deliverable, or strategic question you need reviewed.
+          <div className="order-1 flex justify-center lg:order-2">
+            <div className="relative">
+              <img
+                src={florinePortrait.url}
+                alt="Florine Zhao — Independent Strategic Review"
+                loading="lazy"
+                className="relative z-10 aspect-[2/3] w-44 object-cover object-top grayscale shadow-2xl sm:w-56 lg:w-64"
+              />
+              <span className="absolute -bottom-6 -right-6 z-0 h-full w-full translate-x-2 -translate-y-2 border border-gold" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Credibility & Expertise Bar */}
+      <section id="expertise" className="scroll-mt-24 border-y border-ink/10">
+        <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+          <div className="grid items-start gap-12 md:grid-cols-4">
+            <div className="md:border-r md:border-gold/30 md:pr-8">
+              <h2 className="font-display text-3xl text-ink">
+                16<span className="text-gold">+</span>
+              </h2>
+              <p className="mt-1 text-[10px] font-bold uppercase tracking-widest text-ink/40">
+                Years of global e-business
+              </p>
+              <p className="mt-3 max-w-[24ch] text-sm leading-relaxed text-ink/60">
+                Across fashion and luxury, including Louis Vuitton, Hermès, Dior,
+                Moët Hennessy and Petit Bateau.
               </p>
             </div>
+            <div className="grid grid-cols-2 gap-8 md:col-span-3 md:grid-cols-3">
+              {expertiseItems.map((item) => (
+                <div key={item.num} className="space-y-3">
+                  <h4 className="text-[10px] font-bold uppercase tracking-widest text-turq">
+                    {item.num}. {item.title}
+                  </h4>
+                  <p className="text-xs leading-relaxed text-ink/55">{item.body}</p>
+                </div>
+              ))}
+              <div className="space-y-3 md:col-span-1">
+                <p className="text-sm font-semibold text-ink">
+                  Fully independent. No implementation. No vendor interests.
+                </p>
+                <p className="text-xs leading-relaxed text-ink/55">
+                  I don't create another layer of work. I help you avoid approving
+                  the wrong one.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <form className="space-y-5 lg:col-span-7" onSubmit={handleSubmit}>
-              <div className="grid gap-5 sm:grid-cols-2">
-                <label className="text-sm font-semibold text-ink">
-                  Name
+      {/* Engagements */}
+      <section id="engagements" className="scroll-mt-24 mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
+        <div className="mb-16 text-center">
+          <h2 className="font-display text-4xl text-ink">Core Engagements</h2>
+          <span className="mx-auto mt-4 block h-px w-12 bg-gold" />
+        </div>
+        <div className="grid gap-8 md:grid-cols-3">
+          {/* Flash */}
+          <article className="group relative flex flex-col border border-ink/10 bg-white p-10 transition-all duration-500 hover:border-turq">
+            <span className="mb-8 font-display text-4xl italic text-gold/30">01</span>
+            <h3 className="font-display text-2xl text-ink">Flash</h3>
+            <p className="mt-2 font-display text-3xl text-gold">$3,000</p>
+            <p className="mt-4 text-sm leading-relaxed text-ink/60">
+              For a high-stakes decision or deliverable requiring fast senior
+              judgment.
+            </p>
+            <ul className="mt-6 space-y-3 text-sm text-ink/75">
+              {flashBullets.map((b) => (
+                <li key={b} className="flex gap-2.5">
+                  <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-turq" />
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
+            <Button
+              type="button"
+              onClick={() => requestQuote("Flash")}
+              className="mt-8 inline-flex w-full items-center justify-center gap-2 border border-ink py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-ink transition-all hover:bg-ink hover:text-white"
+            >
+              Request a quote <ArrowRight aria-hidden="true" />
+            </Button>
+          </article>
+
+          {/* Advisory (featured) */}
+          <article className="group relative flex flex-col border border-ink bg-ink p-10 text-white shadow-2xl">
+            <span className="mb-8 font-display text-4xl italic text-white/10">02</span>
+            <h3 className="font-display text-2xl">Advisory</h3>
+            <p className="mt-2 font-display text-3xl text-gold">
+              $3,200 <span className="text-lg text-white/50">/month</span>
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-white/60">
+              Your independent strategic second opinion, on a reserved basis.
+            </p>
+            <ul className="mt-6 space-y-3 text-sm text-white/80">
+              {advisoryBullets.map((b) => (
+                <li key={b} className="flex gap-2.5">
+                  <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-gold" />
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6 space-y-2 border-t border-white/15 pt-5">
+              <p className="text-xs leading-relaxed text-white/55">
+                Does not include: implementation, project management, recurring
+                team meetings, or production work.
+              </p>
+              <p className="text-xs leading-relaxed text-gold">
+                (Up to 8 hours/month of reserved senior advisory capacity)
+              </p>
+            </div>
+            <Button
+              type="button"
+              onClick={() => requestQuote("Advisory")}
+              className="mt-8 inline-flex w-full items-center justify-center gap-2 bg-gold py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white transition-all hover:bg-white hover:text-ink"
+            >
+              Request a quote <ArrowRight aria-hidden="true" />
+            </Button>
+          </article>
+
+          {/* Partner */}
+          <article className="group relative flex flex-col border border-ink/10 bg-white p-10 transition-all duration-500 hover:border-turq">
+            <span className="mb-8 font-display text-4xl italic text-gold/30">03</span>
+            <h3 className="font-display text-2xl text-ink">Partner</h3>
+            <p className="mt-2 font-display text-3xl text-gold">
+              $11,000 <span className="text-lg text-ink/50">/month</span>
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-ink/60">
+              Your external strategic quality gate.
+            </p>
+            <ul className="mt-6 space-y-3 text-sm text-ink/75">
+              {partnerBullets.map((b) => (
+                <li key={b} className="flex gap-2.5">
+                  <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-gold" />
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6 space-y-2 border-t border-ink/10 pt-5">
+              <p className="text-xs leading-relaxed text-ink/55">
+                Not a fractional CMO, project manager, or implementation lead.
+              </p>
+              <p className="text-xs leading-relaxed text-gold">
+                (Up to 28 hours/month of reserved senior advisory capacity)
+              </p>
+            </div>
+            <Button
+              type="button"
+              onClick={() => requestQuote("Partner")}
+              className="mt-8 inline-flex w-full items-center justify-center gap-2 border border-ink py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-ink transition-all hover:bg-ink hover:text-white"
+            >
+              Request a quote <ArrowRight aria-hidden="true" />
+            </Button>
+          </article>
+        </div>
+
+        {/* additional work */}
+        <div className="mt-6 flex flex-col gap-4 border-y border-ink/10 px-8 py-8 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="font-display text-2xl text-ink">Additional work</p>
+            <p className="mt-2 max-w-[60ch] text-sm leading-relaxed text-ink/70">
+              Work outside the scope or reserved capacity of an engagement is
+              billed at $500/hour, subject to availability. Complex or extensive
+              reviews are scoped separately.
+            </p>
+          </div>
+          <span className="font-display shrink-0 text-4xl text-gold">
+            $500<span className="text-lg text-ink/50">/hour</span>
+          </span>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section id="testimonials" className="scroll-mt-24 mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
+        <div className="mb-16 text-center">
+          <h2 className="font-display text-4xl text-ink">Testimonials</h2>
+          <span className="mx-auto mt-4 block h-px w-12 bg-gold" />
+        </div>
+        <div className="grid gap-8 md:grid-cols-2">
+          {testimonials.map((t) => (
+            <figure
+              key={t.name}
+              className="flex flex-col border border-ink/10 bg-white p-10 shadow-[0_20px_50px_-30px_rgba(20,32,31,0.35)]"
+            >
+              <blockquote className="flex-1">
+                <p className="font-display text-lg italic leading-relaxed text-ink/85">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+              </blockquote>
+              <figcaption className="mt-8 flex items-center gap-4 border-t border-ink/10 pt-6">
+                <span className="grid size-14 shrink-0 place-items-center overflow-hidden rounded-full bg-ink/5 ring-1 ring-ink/10">
+                  <img
+                    src={t.logo}
+                    alt={`${t.company} logo`}
+                    loading="lazy"
+                    width={1152}
+                    height={576}
+                    className="h-10 w-10 object-contain opacity-80 grayscale"
+                  />
+                </span>
+                <div>
+                  <p className="font-display text-base tracking-wide text-ink">
+                    {t.name}
+                  </p>
+                  <p className="mt-1 text-sm text-ink/65">
+                    {t.role} <span className="text-gold">·</span> {t.company}
+                  </p>
+                </div>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      {/* Quote Form */}
+      <section id="request-quote" className="scroll-mt-24 bg-ink py-24 text-white lg:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="grid gap-16 lg:grid-cols-2">
+            <div>
+              <div className="inline-flex items-center gap-4">
+                <span className="h-px w-8 bg-gold" />
+                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-gold">
+                  Request a quote
+                </span>
+              </div>
+              <h2 className="mt-6 font-display text-4xl lg:text-5xl">
+                Share the decision, deliverable, or strategic question you need
+                reviewed.
+              </h2>
+              <p className="mt-8 max-w-sm text-lg leading-relaxed text-white/60">
+                I review and challenge AI outputs, agency recommendations, and
+                strategic deliverables.
+              </p>
+              <div className="mt-10 space-y-4">
+                <p className="text-xs font-bold uppercase tracking-widest text-white/50">
+                  Fully independent
+                </p>
+                <p className="font-display text-xl">No implementation. No vendor interests.</p>
+              </div>
+            </div>
+
+            <form className="space-y-10" onSubmit={handleSubmit}>
+              <div className="grid gap-10 md:grid-cols-2">
+                <div className="space-y-2">
+                  <label className="text-[10px] font-bold uppercase tracking-widest text-white/50">
+                    Name
+                  </label>
                   <input
                     name="name"
                     required
                     maxLength={100}
                     autoComplete="name"
-                    className="mt-2 min-h-12 w-full rounded-lg border border-ink/20 bg-background px-4 font-normal text-ink outline-none transition focus:border-turq focus:ring-2 focus:ring-turq/20"
+                    className="w-full border-b border-white/20 bg-transparent py-3 text-white outline-none transition-colors focus:border-gold"
                   />
-                </label>
-                <label className="text-sm font-semibold text-ink">
-                  Work email
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[10px] font-bold uppercase tracking-widest text-white/50">
+                    Work email
+                  </label>
                   <input
                     name="email"
                     type="email"
                     required
                     maxLength={255}
                     autoComplete="email"
-                    className="mt-2 min-h-12 w-full rounded-lg border border-ink/20 bg-background px-4 font-normal text-ink outline-none transition focus:border-turq focus:ring-2 focus:ring-turq/20"
+                    className="w-full border-b border-white/20 bg-transparent py-3 text-white outline-none transition-colors focus:border-gold"
                   />
-                </label>
-                <label className="text-sm font-semibold text-ink">
-                  Company <span className="font-normal text-ink/60">(optional)</span>
+                </div>
+              </div>
+              <div className="grid gap-10 md:grid-cols-2">
+                <div className="space-y-2">
+                  <label className="text-[10px] font-bold uppercase tracking-widest text-white/50">
+                    Company <span className="font-normal text-white/30">(optional)</span>
+                  </label>
                   <input
                     name="company"
                     maxLength={150}
                     autoComplete="organization"
-                    className="mt-2 min-h-12 w-full rounded-lg border border-ink/20 bg-background px-4 font-normal text-ink outline-none transition focus:border-turq focus:ring-2 focus:ring-turq/20"
+                    className="w-full border-b border-white/20 bg-transparent py-3 text-white outline-none transition-colors focus:border-gold"
                   />
-                </label>
-                <label className="text-sm font-semibold text-ink">
-                  Service
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[10px] font-bold uppercase tracking-widest text-white/50">
+                    Service
+                  </label>
                   <select
                     value={selectedService}
                     onChange={(event) => setSelectedService(event.target.value)}
-                    className="mt-2 min-h-12 w-full rounded-lg border border-ink/20 bg-background px-4 font-normal text-ink outline-none transition focus:border-turq focus:ring-2 focus:ring-turq/20"
+                    className="w-full border-b border-white/20 bg-transparent py-3 text-white outline-none transition-colors focus:border-gold"
                   >
-                    <option>Flash</option>
-                    <option>Advisory</option>
-                    <option>Partner</option>
+                    <option className="bg-ink text-white">Flash</option>
+                    <option className="bg-ink text-white">Advisory</option>
+                    <option className="bg-ink text-white">Partner</option>
                   </select>
-                </label>
+                </div>
               </div>
-              <label className="block text-sm font-semibold text-ink">
-                What would you like reviewed?
+              <div className="space-y-2">
+                <label className="text-[10px] font-bold uppercase tracking-widest text-white/50">
+                  What would you like reviewed?
+                </label>
                 <textarea
                   name="message"
                   required
                   minLength={10}
                   maxLength={2000}
-                  rows={6}
-                  className="mt-2 w-full resize-y rounded-lg border border-ink/20 bg-background px-4 py-3 font-normal text-ink outline-none transition focus:border-turq focus:ring-2 focus:ring-turq/20"
+                  rows={4}
+                  className="w-full resize-none border-b border-white/20 bg-transparent py-3 text-white outline-none transition-colors focus:border-gold"
                 />
-              </label>
+              </div>
               <label className="sr-only" aria-hidden="true">
                 Website
                 <input name="website" tabIndex={-1} autoComplete="off" />
@@ -507,7 +547,7 @@ function Index() {
                 <Button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="min-h-12 bg-ink px-7 text-background hover:bg-ink/90"
+                  className="bg-gold px-12 py-5 text-xs font-bold uppercase tracking-[0.2em] text-white transition-all hover:bg-white hover:text-ink disabled:opacity-60"
                 >
                   {status === "submitting" ? "Sending…" : "Send request"}
                   {status !== "submitting" && <ArrowRight aria-hidden="true" />}
@@ -519,22 +559,25 @@ function Index() {
                       Your request has been received.
                     </p>
                   )}
-                  {status === "error" && <p className="text-destructive">{errorMessage}</p>}
+                  {status === "error" && (
+                    <p className="text-destructive">{errorMessage}</p>
+                  )}
                 </div>
               </div>
             </form>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      {/* footer */}
-      <footer className="relative z-10 mx-auto max-w-6xl px-6 lg:px-10 pb-10">
-        <div className="flex flex-col gap-2 py-8 sm:flex-row sm:items-center sm:justify-between">
-          <span className="font-display text-base text-ink">
-            Independent Strategic Review
-          </span>
-          <span className="text-[11px] uppercase tracking-[0.28em] text-ink/40">
+      {/* Footer */}
+      <footer className="border-t border-ink/10">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 py-12 md:flex-row lg:px-10">
+          <span className="font-display text-xl font-bold">Independent Strategic Review</span>
+          <span className="text-[10px] uppercase tracking-[0.3em] text-ink/40">
             Fully independent. No implementation. No vendor interests.
+          </span>
+          <span className="text-[10px] uppercase tracking-[0.3em] text-ink/40">
+            © 2026 Independent Strategic Review
           </span>
         </div>
       </footer>

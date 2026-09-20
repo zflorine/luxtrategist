@@ -423,9 +423,9 @@ function Index() {
                 <span
                   className={`grid shrink-0 place-items-center overflow-hidden rounded-full bg-white ring-1 ring-ink/10 ${
                     t.company === "Petit Bateau"
-                      ? "size-20"
+                      ? "size-24"
                       : t.company === "Hermès"
-                        ? "size-18"
+                        ? "size-20"
                         : "size-14"
                   }`}
                 >

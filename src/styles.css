@@ -62,8 +62,8 @@
   --color-turq: var(--brand-turq);
   --color-gold: var(--brand-gold);
   --color-ink: var(--brand-ink);
-  --font-display: "Fraunces", Georgia, serif;
-  --font-body: "Manrope", system-ui, sans-serif;
+  --font-display: "Libre Baskerville", Georgia, serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
 }
 
 :root {

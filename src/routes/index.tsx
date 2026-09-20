@@ -420,14 +420,28 @@ function Index() {
                 </p>
               </blockquote>
               <figcaption className="mt-8 flex items-center gap-4 border-t border-ink/10 pt-6">
-                <span className="grid size-14 shrink-0 place-items-center overflow-hidden rounded-full bg-ink/5 ring-1 ring-ink/10">
+                <span
+                  className={`grid shrink-0 place-items-center overflow-hidden rounded-full bg-white ring-1 ring-ink/10 ${
+                    t.company === "Petit Bateau"
+                      ? "size-16"
+                      : t.company === "Hermès"
+                        ? "size-15"
+                        : "size-14"
+                  }`}
+                >
                   <img
                     src={t.logo}
                     alt={`${t.company} logo`}
                     loading="lazy"
                     width={1152}
                     height={576}
-                    className="h-10 w-10 object-contain opacity-80 grayscale"
+                    className={`h-full w-full object-contain p-1.5 grayscale ${
+                      t.company === "Petit Bateau"
+                        ? "opacity-100"
+                        : t.company === "Hermès"
+                          ? "opacity-95"
+                          : "opacity-90"
+                    }`}
                   />
                 </span>
                 <div>

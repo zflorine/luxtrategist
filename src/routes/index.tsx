@@ -321,8 +321,9 @@ function Index() {
             </ul>
             <Button
               type="button"
+              variant="outline"
               onClick={() => requestQuote("Flash")}
-              className="mt-8 inline-flex w-full items-center justify-center gap-2 border border-ink py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-ink transition-all hover:bg-ink hover:text-white"
+              className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-none border border-ink bg-white py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-ink transition-all hover:bg-ink hover:text-white"
             >
               Request a quote <ArrowRight aria-hidden="true" />
             </Button>

@@ -194,71 +194,85 @@ function Index() {
       </header>
 
       {/* Hero */}
-      <section id="top" className="mx-auto max-w-7xl px-6 py-20 lg:py-32">
-        <div className="grid items-center gap-16 lg:grid-cols-2">
-          <div className="order-2 space-y-8 lg:order-1">
+      <section id="top" className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-24">
+        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-7">
             <div className="inline-flex items-center gap-4">
               <span className="h-px w-8 bg-gold" />
               <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-gold">
                 Independent Senior Voice
               </span>
             </div>
-            <h1 className="font-display text-5xl leading-[1.1] text-ink lg:text-6xl">
+            <h1 className="mt-6 font-display text-[1.75rem] leading-[1.25] text-ink sm:text-3xl lg:text-[2.6rem] lg:leading-[1.2]">
               You already have the teams, agencies and AI tools.{" "}
               <span className="italic text-turq">What you may be missing</span>{" "}
               is an independent senior voice to challenge what they produce.
             </h1>
-            <p className="max-w-md text-lg leading-relaxed text-ink/70">
-              I provide independent strategic second opinions for executives in
-              luxury, fashion and beauty.
-            </p>
-            <p className="max-w-md text-lg leading-relaxed text-ink/70">
-              I review and challenge AI outputs, agency recommendations, and
-              strategic deliverables, bridging the gap between Western
-              headquarters and the realities of markets such as China.
-            </p>
-            <div className="pt-4">
+            <div className="mt-8 grid gap-6 sm:grid-cols-2">
+              <p className="text-base leading-relaxed text-ink/70">
+                I provide independent strategic second opinions for executives in
+                luxury, fashion and beauty.
+              </p>
+              <p className="text-base leading-relaxed text-ink/70">
+                I review and challenge AI outputs, agency recommendations, and
+                strategic deliverables, bridging the gap between Western
+                headquarters and the realities of markets such as China.
+              </p>
+            </div>
+            <div className="mt-10 flex flex-wrap items-center gap-6">
               <Button
                 type="button"
                 onClick={() => scrollTo("engagements")}
-                className="bg-ink px-10 py-5 text-xs font-bold uppercase tracking-[0.2em] hover:bg-turq"
+                className="bg-ink px-8 py-5 text-xs font-bold uppercase tracking-[0.2em] hover:bg-turq"
               >
                 View Engagements <ArrowRight aria-hidden="true" />
               </Button>
+              <button
+                type="button"
+                onClick={() => scrollTo("request-quote")}
+                className="text-xs font-bold uppercase tracking-[0.2em] text-ink/60 underline decoration-gold decoration-1 underline-offset-8 transition-colors hover:text-turq"
+              >
+                Request a quote
+              </button>
             </div>
           </div>
 
-          <div className="order-1 flex justify-center lg:order-2">
-            <div className="relative">
-              <img
-                src={florinePortrait.url}
-                alt="Florine Zhao — Independent Strategic Review"
-                loading="lazy"
-                className="relative z-10 aspect-[2/3] w-36 object-cover object-top grayscale shadow-2xl sm:w-44 lg:w-52"
-              />
-              <span className="absolute -bottom-6 -right-6 z-0 h-full w-full translate-x-2 -translate-y-2 border border-gold" />
+          <div className="lg:col-span-5">
+            <div className="flex items-center gap-6 sm:gap-8">
+              <div className="relative shrink-0">
+                <img
+                  src={florinePortrait.url}
+                  alt="Florine Zhao — Independent Strategic Review"
+                  loading="lazy"
+                  className="relative z-10 aspect-[2/3] w-32 object-cover object-top grayscale shadow-xl sm:w-40 lg:w-44"
+                />
+                <span className="absolute -bottom-4 -right-4 z-0 h-full w-full border border-gold" />
+              </div>
+              <div className="border-l border-gold/40 pl-6">
+                <p className="font-display text-3xl text-ink">
+                  16<span className="text-gold">+</span>
+                </p>
+                <p className="mt-1 text-[10px] font-bold uppercase tracking-widest text-ink/40">
+                  Years of global e-business
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-ink/60">
+                  Across fashion and luxury, including Louis Vuitton, Hermès,
+                  Dior, Moët Hennessy and Petit Bateau.
+                </p>
+
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+
       {/* Credibility & Expertise Bar */}
       <section id="expertise" className="scroll-mt-24 border-y border-ink/10">
         <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-          <div className="grid items-start gap-12 md:grid-cols-4">
-            <div className="md:border-r md:border-gold/30 md:pr-8">
-              <h2 className="font-display text-3xl text-ink">
-                16<span className="text-gold">+</span>
-              </h2>
-              <p className="mt-1 text-[10px] font-bold uppercase tracking-widest text-ink/40">
-                Years of global e-business
-              </p>
-              <p className="mt-3 max-w-[24ch] text-sm leading-relaxed text-ink/60">
-                Across fashion and luxury, including Louis Vuitton, Hermès, Dior,
-                Moët Hennessy and Petit Bateau.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-8 md:col-span-3 md:grid-cols-3">
+          <div className="grid items-start gap-12">
+            <div className="grid grid-cols-2 gap-8 md:grid-cols-3">
+
               {expertiseItems.map((item) => (
                 <div key={item.num} className="space-y-3">
                   <h4 className="text-[10px] font-bold uppercase tracking-widest text-turq">

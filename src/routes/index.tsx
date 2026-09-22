@@ -185,7 +185,7 @@ function Index() {
             <button
               type="button"
               onClick={() => scrollTo("request-quote")}
-              className="rounded-md border border-gold px-6 py-3 text-gold transition-all hover:bg-gold hover:text-white"
+              className="rounded-[5px] border border-gold px-6 py-3 text-gold transition-all hover:bg-gold hover:text-white"
             >
               Inquire
             </button>
@@ -323,7 +323,7 @@ function Index() {
               type="button"
               variant="outline"
               onClick={() => requestQuote("Flash")}
-              className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-md border border-ink bg-white py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-ink transition-all hover:bg-ink hover:text-white"
+              className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-[5px] border border-ink bg-white py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-ink transition-all hover:bg-ink hover:text-white"
             >
               Request a quote <ArrowRight aria-hidden="true" />
             </Button>
@@ -395,7 +395,7 @@ function Index() {
               type="button"
               variant="outline"
               onClick={() => requestQuote("Partner")}
-              className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-md border border-ink bg-white py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-ink transition-all hover:bg-ink hover:text-white"
+              className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-[5px] border border-ink bg-white py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-ink transition-all hover:bg-ink hover:text-white"
             >
               Request a quote <ArrowRight aria-hidden="true" />
             </Button>

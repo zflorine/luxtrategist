@@ -271,20 +271,9 @@ function Index() {
       {/* Credibility & Expertise Bar */}
       <section id="expertise" className="scroll-mt-24 border-y border-ink/10">
         <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-          <div className="grid items-start gap-12 md:grid-cols-4">
-            <div className="md:border-r md:border-gold/30 md:pr-8">
-              <h2 className="font-display text-3xl text-ink">
-                16<span className="text-gold">+</span>
-              </h2>
-              <p className="mt-1 text-[10px] font-bold uppercase tracking-widest text-ink/40">
-                Years of global e-business
-              </p>
-              <p className="mt-3 max-w-[24ch] text-sm leading-relaxed text-ink/60">
-                Across fashion and luxury, including Louis Vuitton, Hermès, Dior,
-                Moët Hennessy and Petit Bateau.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-8 md:col-span-3 md:grid-cols-3">
+          <div className="grid items-start gap-12">
+            <div className="grid grid-cols-2 gap-8 md:grid-cols-3">
+
               {expertiseItems.map((item) => (
                 <div key={item.num} className="space-y-3">
                   <h4 className="text-[10px] font-bold uppercase tracking-widest text-turq">

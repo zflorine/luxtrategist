@@ -234,7 +234,7 @@ function Index() {
                 src={florinePortrait.url}
                 alt="Florine Zhao — Independent Strategic Review"
                 loading="lazy"
-                className="relative z-10 aspect-[2/3] w-44 object-cover object-top grayscale shadow-2xl sm:w-56 lg:w-64"
+                className="relative z-10 aspect-[2/3] w-36 object-cover object-top grayscale shadow-2xl sm:w-44 lg:w-52"
               />
               <span className="absolute -bottom-6 -right-6 z-0 h-full w-full translate-x-2 -translate-y-2 border border-gold" />
             </div>

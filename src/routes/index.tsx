@@ -256,11 +256,10 @@ function Index() {
                   Years of global e-business
                 </p>
                 <p className="mt-4 text-sm leading-relaxed text-ink/60">
-                  Louis Vuitton, Hermès, Dior, Moët Hennessy, Petit Bateau.
+                  Across fashion and luxury, including Louis Vuitton, Hermès,
+                  Dior, Moët Hennessy and Petit Bateau.
                 </p>
-                <p className="mt-4 text-sm font-semibold leading-relaxed text-ink">
-                  Fully independent. No implementation. No vendor interests.
-                </p>
+
               </div>
             </div>
           </div>

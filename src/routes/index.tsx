@@ -67,12 +67,28 @@ const partnerBullets = [
   "3-month initial engagement, auto-renews monthly",
 ];
 
-const expertiseItems = [
-  { num: "01", title: "Digital & AI strategy", body: "Reviewing AI outputs, agency recommendations, and strategic deliverables." },
-  { num: "02", title: "E-commerce, UX/CRO & SEO/GEO", body: "Bridging Western headquarters and market realities." },
-  { num: "03", title: "China digital ecosystems & localization", body: "In-depth knowledge of the Chinese digital market." },
-  { num: "04", title: "Omnichannel & customer experience", body: "The online customer journey, end to end." },
-  { num: "05", title: "Strategic review of AI and agency deliverables", body: "An independent senior voice to challenge what they produce." },
+const cloudKeywords: {
+  label: string;
+  size: string;
+  color: string;
+  italic?: boolean;
+}[] = [
+  { label: "Digital & AI Strategy", size: "text-2xl", color: "text-ink" },
+  { label: "E-commerce", size: "text-3xl", color: "text-turq" },
+  { label: "UX / CRO", size: "text-lg", color: "text-ink/60" },
+  { label: "SEO / GEO", size: "text-lg", color: "text-ink/60" },
+  { label: "China Digital Ecosystems", size: "text-2xl", color: "text-gold" },
+  { label: "Localization", size: "text-xl", color: "text-ink/70" },
+  { label: "Omnichannel", size: "text-2xl", color: "text-turq" },
+  { label: "Customer Experience", size: "text-xl", color: "text-ink/70" },
+  { label: "Strategic Review", size: "text-3xl", color: "text-ink" },
+  { label: "AI Deliverables", size: "text-lg", color: "text-ink/60" },
+  { label: "Agency Recommendations", size: "text-xl", color: "text-ink/70" },
+  { label: "Global Growth", size: "text-2xl", color: "text-gold" },
+  { label: "Market Localization", size: "text-lg", color: "text-ink/60" },
+  { label: "Fully Independent", size: "text-2xl", color: "text-turq", italic: true },
+  { label: "No Implementation", size: "text-lg", color: "text-ink/50", italic: true },
+  { label: "No Vendor Interests", size: "text-lg", color: "text-ink/50", italic: true },
 ];
 
 const testimonials = [

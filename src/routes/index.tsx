@@ -216,6 +216,9 @@ function Index() {
                 deliverables to ensure digital strategies meet the highest
                 standards.
               </p>
+              <p className="mt-6 font-bold text-ink">
+                Fully independent. No implementation. No vendor interests.
+              </p>
             </div>
             <div className="mt-10 flex flex-wrap items-center gap-6">
               <Button

@@ -67,12 +67,28 @@ const partnerBullets = [
   "3-month initial engagement, auto-renews monthly",
 ];
 
-const expertiseItems = [
-  { num: "01", title: "Digital & AI strategy", body: "Reviewing AI outputs, agency recommendations, and strategic deliverables." },
-  { num: "02", title: "E-commerce, UX/CRO & SEO/GEO", body: "Bridging Western headquarters and market realities." },
-  { num: "03", title: "China digital ecosystems & localization", body: "In-depth knowledge of the Chinese digital market." },
-  { num: "04", title: "Omnichannel & customer experience", body: "The online customer journey, end to end." },
-  { num: "05", title: "Strategic review of AI and agency deliverables", body: "An independent senior voice to challenge what they produce." },
+const cloudKeywords: {
+  label: string;
+  size: string;
+  color: string;
+  italic?: boolean;
+}[] = [
+  { label: "Digital & AI Strategy", size: "text-2xl", color: "text-ink" },
+  { label: "E-commerce", size: "text-3xl", color: "text-turq" },
+  { label: "UX / CRO", size: "text-lg", color: "text-ink/60" },
+  { label: "SEO / GEO", size: "text-lg", color: "text-ink/60" },
+  { label: "China Digital Ecosystems", size: "text-2xl", color: "text-gold" },
+  { label: "Localization", size: "text-xl", color: "text-ink/70" },
+  { label: "Omnichannel", size: "text-2xl", color: "text-turq" },
+  { label: "Customer Experience", size: "text-xl", color: "text-ink/70" },
+  { label: "Strategic Review", size: "text-3xl", color: "text-ink" },
+  { label: "AI Deliverables", size: "text-lg", color: "text-ink/60" },
+  { label: "Agency Recommendations", size: "text-xl", color: "text-ink/70" },
+  { label: "Global Growth", size: "text-2xl", color: "text-gold" },
+  { label: "Market Localization", size: "text-lg", color: "text-ink/60" },
+  { label: "Fully Independent", size: "text-2xl", color: "text-turq", italic: true },
+  { label: "No Implementation", size: "text-lg", color: "text-ink/50", italic: true },
+  { label: "No Vendor Interests", size: "text-lg", color: "text-ink/50", italic: true },
 ];
 
 const testimonials = [
@@ -268,30 +284,23 @@ function Index() {
       </section>
 
 
-      {/* Credibility & Expertise Bar */}
+      {/* Expertise — word cloud */}
       <section id="expertise" className="scroll-mt-24 border-y border-ink/10">
         <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-          <div className="grid items-start gap-12">
-            <div className="grid grid-cols-2 gap-8 md:grid-cols-3">
-
-              {expertiseItems.map((item) => (
-                <div key={item.num} className="space-y-3">
-                  <h4 className="text-[10px] font-bold uppercase tracking-widest text-turq">
-                    {item.num}. {item.title}
-                  </h4>
-                  <p className="text-xs leading-relaxed text-ink/55">{item.body}</p>
-                </div>
-              ))}
-              <div className="space-y-3 md:col-span-1">
-                <p className="text-sm font-semibold text-ink">
-                  Fully independent. No implementation. No vendor interests.
-                </p>
-                <p className="text-xs leading-relaxed text-ink/55">
-                  I don't create another layer of work. I help you avoid approving
-                  the wrong one.
-                </p>
-              </div>
-            </div>
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-center font-display">
+            {cloudKeywords.map((kw, i) => (
+              <span
+                key={i}
+                className={[
+                  "leading-tight transition-colors",
+                  kw.size,
+                  kw.color,
+                  kw.italic ? "italic" : "",
+                ].join(" ")}
+              >
+                {kw.label}
+              </span>
+            ))}
           </div>
         </div>
       </section>

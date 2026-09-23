@@ -73,25 +73,16 @@ const cloudKeywords: {
   color: string;
   italic?: boolean;
 }[] = [
-  // Role — gray
   { label: "Strategic Second Opinion", size: "text-3xl", color: "text-ink/45" },
-  { label: "Executive Advisory", size: "text-2xl", color: "text-ink/45" },
-  { label: "Decision Support", size: "text-lg", color: "text-ink/45" },
-  // Digital & AI — turquoise
   { label: "Digital Strategy", size: "text-2xl", color: "text-turq" },
   { label: "AI Strategy", size: "text-2xl", color: "text-turq" },
-  { label: "Digital Transformation", size: "text-2xl", color: "text-turq" },
-  { label: "E-commerce Strategy", size: "text-xl", color: "text-turq" },
-  { label: "AI Output Review", size: "text-xl", color: "text-turq" },
-  { label: "Digital Performance", size: "text-xl", color: "text-turq" },
-  { label: "AI Transformation", size: "text-2xl", color: "text-turq" },
-  { label: "Generative AI", size: "text-xl", color: "text-turq" },
-  { label: "China Digital Strategy", size: "text-2xl", color: "text-turq" },
-  // Luxury & branding — gold
-  { label: "Brand Premiumization", size: "text-xl", color: "text-gold" },
+  { label: "Brand Premiumization", size: "text-3xl", color: "text-gold" },
   { label: "Luxury E-commerce", size: "text-2xl", color: "text-gold" },
   { label: "Digital Branding", size: "text-lg", color: "text-gold" },
-  // The rest — black
+  { label: "E-commerce Strategy", size: "text-xl", color: "text-turq" },
+  { label: "AI Output Review", size: "text-xl", color: "text-turq" },
+  { label: "Executive Advisory", size: "text-2xl", color: "text-ink/45" },
+  { label: "China Digital Strategy", size: "text-2xl", color: "text-turq" },
   { label: "Market Localization", size: "text-lg", color: "text-ink" },
   { label: "Global Growth", size: "text-xl", color: "text-ink" },
   { label: "International Expansion", size: "text-lg", color: "text-ink" },
@@ -105,6 +96,9 @@ const cloudKeywords: {
   { label: "Social Media", size: "text-lg", color: "text-ink" },
   { label: "CRM", size: "text-lg", color: "text-ink" },
   { label: "Website Redesign", size: "text-xl", color: "text-ink" },
+  { label: "Digital Performance", size: "text-xl", color: "text-turq" },
+  { label: "Generative AI", size: "text-xl", color: "text-turq" },
+  { label: "Decision Support", size: "text-lg", color: "text-ink/45" },
   { label: "International Markets", size: "text-lg", color: "text-ink" },
 ];
 

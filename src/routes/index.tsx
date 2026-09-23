@@ -208,15 +208,13 @@ function Index() {
               <span className="italic text-turq">What you may be missing</span>{" "}
               is an independent senior voice to challenge what they produce.
             </h1>
-            <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            <div className="mt-8">
               <p className="text-base leading-relaxed text-ink/70">
-                I provide independent strategic second opinions for executives in
-                luxury, fashion and beauty.
-              </p>
-              <p className="text-base leading-relaxed text-ink/70">
-                I review and challenge AI outputs, agency recommendations, and
-                strategic deliverables, bridging the gap between Western
-                headquarters and the realities of markets such as China.
+                I provide independent strategic reviews for premium and luxury
+                brands navigating global growth and market localization,
+                challenging AI outputs, agency recommendations, and strategic
+                deliverables to ensure digital strategies meet the highest
+                standards.
               </p>
             </div>
             <div className="mt-10 flex flex-wrap items-center gap-6">

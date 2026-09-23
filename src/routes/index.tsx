@@ -268,30 +268,23 @@ function Index() {
       </section>
 
 
-      {/* Credibility & Expertise Bar */}
+      {/* Expertise — word cloud */}
       <section id="expertise" className="scroll-mt-24 border-y border-ink/10">
         <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-          <div className="grid items-start gap-12">
-            <div className="grid grid-cols-2 gap-8 md:grid-cols-3">
-
-              {expertiseItems.map((item) => (
-                <div key={item.num} className="space-y-3">
-                  <h4 className="text-[10px] font-bold uppercase tracking-widest text-turq">
-                    {item.num}. {item.title}
-                  </h4>
-                  <p className="text-xs leading-relaxed text-ink/55">{item.body}</p>
-                </div>
-              ))}
-              <div className="space-y-3 md:col-span-1">
-                <p className="text-sm font-semibold text-ink">
-                  Fully independent. No implementation. No vendor interests.
-                </p>
-                <p className="text-xs leading-relaxed text-ink/55">
-                  I don't create another layer of work. I help you avoid approving
-                  the wrong one.
-                </p>
-              </div>
-            </div>
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-center font-display">
+            {cloudKeywords.map((kw, i) => (
+              <span
+                key={i}
+                className={[
+                  "leading-tight transition-colors",
+                  kw.size,
+                  kw.color,
+                  kw.italic ? "italic" : "",
+                ].join(" ")}
+              >
+                {kw.label}
+              </span>
+            ))}
           </div>
         </div>
       </section>

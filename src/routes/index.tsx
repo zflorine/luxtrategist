@@ -9,6 +9,7 @@ import logoHermes from "@/assets/logo-hermes.png";
 import logoMoet from "@/assets/logo-moet.png";
 import logoPetitBateau from "@/assets/logo-petitbateau.png";
 import florinePortrait from "@/assets/florine-portrait.jpeg.asset.json";
+import fzLogo from "@/assets/fz-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -189,12 +190,7 @@ function Index() {
             onClick={() => scrollTo("top")}
             className="flex items-center gap-3"
           >
-            <span
-              className="grid size-9 place-items-center rounded-full text-[11px] font-semibold tracking-[0.15em] text-white"
-              style={{ background: "#14201F" }}
-            >
-              SR
-            </span>
+            <img src={fzLogo.url} alt="FZ" className="size-9 object-contain" />
             <span className="font-display text-lg font-bold tracking-tight">
               Independent Strategic Review
             </span>
@@ -615,7 +611,10 @@ function Index() {
       {/* Footer */}
       <footer className="border-t border-ink/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 py-12 md:flex-row lg:px-10">
-          <span className="font-display text-xl font-bold">Independent Strategic Review</span>
+          <span className="flex items-center gap-3">
+            <img src={fzLogo.url} alt="FZ" className="size-10 object-contain" />
+            <span className="font-display text-xl font-bold">Independent Strategic Review</span>
+          </span>
           <span className="text-[10px] uppercase tracking-[0.3em] text-ink/40">
             Fully independent. No implementation. No vendor interests.
           </span>

@@ -615,12 +615,17 @@ function Index() {
             <img src={fzLogo.url} alt="FZ" className="size-10 object-contain" />
             <span className="font-display text-xl font-bold">Independent Strategic Review</span>
           </span>
-          <span className="text-[10px] uppercase tracking-[0.3em] text-ink/40">
-            Fully independent. No implementation. No vendor interests.
-          </span>
-          <span className="text-[10px] uppercase tracking-[0.3em] text-ink/40">
-            © 2026 Independent Strategic Review
-          </span>
+          <div className="flex items-center gap-6">
+            <Link
+              to="/privacy-policy"
+              className="text-[10px] uppercase tracking-[0.3em] text-ink/40 transition-colors hover:text-turq"
+            >
+              Privacy Policy
+            </Link>
+            <span className="text-[10px] uppercase tracking-[0.3em] text-ink/40">
+              © 2026 Independent Strategic Review
+            </span>
+          </div>
         </div>
       </footer>
     </main>

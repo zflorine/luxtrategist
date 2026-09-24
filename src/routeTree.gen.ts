@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as TermsOfUseRouteImport } from './routes/terms-of-use'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +23,40 @@ const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
   path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TermsOfUseRoute = TermsOfUseRouteImport.update({
+  id: '/terms-of-use',
+  path: '/terms-of-use',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-of-use': typeof TermsOfUseRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-of-use': typeof TermsOfUseRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-of-use': typeof TermsOfUseRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/privacy-policy'
+  fullPaths: '/' | '/privacy-policy' | '/terms-of-use'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/privacy-policy'
-  id: '__root__' | '/' | '/privacy-policy'
+  to: '/' | '/privacy-policy' | '/terms-of-use'
+  id: '__root__' | '/' | '/privacy-policy' | '/terms-of-use'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  TermsOfUseRoute: typeof TermsOfUseRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +75,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/terms-of-use': {
+      id: '/terms-of-use'
+      path: '/terms-of-use'
+      fullPath: '/terms-of-use'
+      preLoaderRoute: typeof TermsOfUseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
+  TermsOfUseRoute: TermsOfUseRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

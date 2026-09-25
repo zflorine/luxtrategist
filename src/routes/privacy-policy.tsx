@@ -422,15 +422,23 @@ function PrivacyPolicyPage() {
               Independent Strategic Review
             </span>
           </span>
-          <Link
-            to="/"
-            className="text-[10px] uppercase tracking-[0.3em] text-ink/40 transition-colors hover:text-turq"
-          >
-            Fully independent. No implementation. No vendor interests.
-          </Link>
-          <span className="text-[10px] uppercase tracking-[0.3em] text-ink/40">
-            © 2026 Independent Strategic Review
-          </span>
+          <div className="flex items-center gap-6">
+            <Link
+              to="/"
+              className="text-[10px] uppercase tracking-[0.3em] text-ink/40 transition-colors hover:text-turq"
+            >
+              Fully independent. No implementation. No vendor interests.
+            </Link>
+            <Link
+              to="/terms-of-use"
+              className="text-[10px] uppercase tracking-[0.3em] text-ink/40 transition-colors hover:text-turq"
+            >
+              Terms of Use
+            </Link>
+            <span className="text-[10px] uppercase tracking-[0.3em] text-ink/40">
+              © 2026 Independent Strategic Review
+            </span>
+          </div>
         </div>
       </footer>
     </main>

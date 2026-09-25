@@ -622,6 +622,12 @@ function Index() {
             >
               Privacy Policy
             </Link>
+            <Link
+              to="/terms-of-use"
+              className="text-[10px] uppercase tracking-[0.3em] text-ink/40 transition-colors hover:text-turq"
+            >
+              Terms of Use
+            </Link>
             <span className="text-[10px] uppercase tracking-[0.3em] text-ink/40">
               © 2026 Independent Strategic Review
             </span>

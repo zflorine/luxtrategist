@@ -1,15 +1,16 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useState, type FormEvent } from "react";
 
 import { Button } from "@/components/ui/button";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
 import { submitQuoteRequest } from "@/lib/quote.functions";
 import logoHermes from "@/assets/logo-hermes.png";
 import logoMoet from "@/assets/logo-moet.png";
 import logoPetitBateau from "@/assets/logo-petitbateau.png";
 import florinePortrait from "@/assets/florine-portrait.jpeg.asset.json";
-import fzLogo from "@/assets/fz-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({

@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 
-import fzLogo from "@/assets/fz-logo.png.asset.json";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
 
 export const Route = createFileRoute("/privacy-policy")({
   head: () => ({

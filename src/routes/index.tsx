@@ -182,39 +182,7 @@ function Index() {
 
   return (
     <main className="min-h-screen bg-white font-body text-ink antialiased selection:bg-turq/20">
-      {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-ink/5 bg-white/95 backdrop-blur-sm">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
-          <button
-            type="button"
-            onClick={() => scrollTo("top")}
-            className="flex items-center gap-3"
-          >
-            <img src={fzLogo.url} alt="FZ" className="size-9 object-contain" />
-            <span className="font-display text-lg font-bold tracking-tight">
-              Independent Strategic Review
-            </span>
-          </button>
-          <nav className="hidden items-center gap-10 text-[10px] font-bold uppercase tracking-[0.2em] md:flex">
-            <button type="button" onClick={() => scrollTo("expertise")} className="text-ink/70 transition-colors hover:text-turq">
-              Expertise
-            </button>
-            <button type="button" onClick={() => scrollTo("engagements")} className="text-ink/70 transition-colors hover:text-turq">
-              Engagements
-            </button>
-            <button type="button" onClick={() => scrollTo("testimonials")} className="text-ink/70 transition-colors hover:text-turq">
-              Testimonials
-            </button>
-            <button
-              type="button"
-              onClick={() => scrollTo("request-quote")}
-              className="rounded-[5px] border border-gold px-6 py-3 text-gold transition-all hover:bg-gold hover:text-white"
-            >
-              Inquire
-            </button>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* Hero */}
       <section id="top" className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-24">
@@ -608,28 +576,7 @@ function Index() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-ink/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-8 px-6 py-12 md:flex-row lg:px-10">
-          <div className="flex items-center gap-6">
-            <Link
-              to="/privacy-policy"
-              className="text-[10px] uppercase tracking-[0.3em] text-ink/40 transition-colors hover:text-turq"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              to="/terms-of-use"
-              className="text-[10px] uppercase tracking-[0.3em] text-ink/40 transition-colors hover:text-turq"
-            >
-              Terms of Use
-            </Link>
-            <span className="text-[10px] uppercase tracking-[0.3em] text-ink/40">
-              © 2026 Florine ZHAO
-            </span>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

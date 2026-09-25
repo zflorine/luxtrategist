@@ -610,11 +610,7 @@ function Index() {
 
       {/* Footer */}
       <footer className="border-t border-ink/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 py-12 md:flex-row lg:px-10">
-          <span className="flex items-center gap-3">
-            <img src={fzLogo.url} alt="FZ" className="size-10 object-contain" />
-            <span className="font-display text-xl font-bold">Independent Strategic Review</span>
-          </span>
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-8 px-6 py-12 md:flex-row lg:px-10">
           <div className="flex items-center gap-6">
             <Link
               to="/privacy-policy"
@@ -629,7 +625,7 @@ function Index() {
               Terms of Use
             </Link>
             <span className="text-[10px] uppercase tracking-[0.3em] text-ink/40">
-              © 2026 Independent Strategic Review
+              © 2026 Florine ZHAO
             </span>
           </div>
         </div>

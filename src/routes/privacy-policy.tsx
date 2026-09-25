@@ -415,7 +415,7 @@ function PrivacyPolicyPage() {
 
       {/* Footer */}
       <footer className="border-t border-ink/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-8 px-6 py-12 md:flex-row md:justify-end lg:px-10">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-8 px-6 py-12 md:flex-row lg:px-10">
           <div className="flex items-center gap-6">
             <Link
               to="/"

@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 
-import fzLogo from "@/assets/fz-logo.png.asset.json";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
 
 export const Route = createFileRoute("/terms-of-use")({
   head: () => ({
@@ -427,23 +428,7 @@ const sections = [
 function TermsOfUsePage() {
   return (
     <main className="min-h-screen bg-white font-body text-ink antialiased selection:bg-turq/20">
-      {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-ink/5 bg-white/95 backdrop-blur-sm">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
-          <Link to="/" className="flex items-center gap-3">
-            <img src={fzLogo.url} alt="FZ" className="size-9 object-contain" />
-            <span className="font-display text-lg font-bold tracking-tight">
-              Independent Strategic Review
-            </span>
-          </Link>
-          <Link
-            to="/"
-            className="rounded-[5px] border border-gold px-6 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-gold transition-all hover:bg-gold hover:text-white"
-          >
-            Back to site
-          </Link>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* Page */}
       <article className="mx-auto max-w-3xl px-6 py-16 lg:px-10 lg:py-24">
@@ -490,28 +475,7 @@ function TermsOfUsePage() {
         </div>
       </article>
 
-      {/* Footer */}
-      <footer className="border-t border-ink/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-8 px-6 py-12 md:flex-row lg:px-10">
-          <div className="flex items-center gap-6">
-            <Link
-              to="/privacy-policy"
-              className="text-[10px] uppercase tracking-[0.3em] text-ink/40 transition-colors hover:text-turq"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              to="/terms-of-use"
-              className="text-[10px] uppercase tracking-[0.3em] text-ink/40 transition-colors hover:text-turq"
-            >
-              Terms of Use
-            </Link>
-            <span className="text-[10px] uppercase tracking-[0.3em] text-ink/40">
-              © 2026 Florine ZHAO
-            </span>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

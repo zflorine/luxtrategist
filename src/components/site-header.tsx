@@ -12,15 +12,12 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-ink/5 bg-white/95 backdrop-blur-sm">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
-        <Link to="/" className="flex items-center gap-3">
+        <Link to="/" className="flex items-center">
           <img
             src={fzLogo.url}
             alt="FZ"
-            className="size-9 rounded-full object-contain ring-1 ring-gold"
+            className="size-9 rounded-none object-contain ring-1 ring-gold"
           />
-          <span className="font-display text-lg font-bold tracking-tight">
-            Independent Strategic Review
-          </span>
         </Link>
         <nav className="hidden items-center gap-10 text-[10px] font-bold uppercase tracking-[0.2em] md:flex">
           {navItems.map((item) => (

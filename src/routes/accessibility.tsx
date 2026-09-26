@@ -46,12 +46,11 @@ function AccessibilityPage() {
           Accessibility
         </h1>
         <span className="mt-4 block h-px w-12 bg-gold" />
-
-        <p className="mt-10 text-[13px] uppercase tracking-[0.2em] text-ink/50">
+        <p className="mt-4 text-sm font-bold uppercase tracking-[0.2em] text-ink/50">
           Last updated: September 2026
         </p>
 
-        <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-ink/75">
+        <div className="mt-10 space-y-5 text-base leading-relaxed text-ink/75">
           <p>
             Florine ZHAO is committed to making this website accessible and
             usable by as many people as possible, including people with

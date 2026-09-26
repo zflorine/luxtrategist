@@ -192,7 +192,7 @@ function Index() {
             <div className="inline-flex items-center gap-4">
               <span className="h-px w-8 bg-gold" />
               <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-gold">
-                Independent Senior Voice
+                Independent Strategic Review
               </span>
             </div>
             <h1 className="mt-6 font-display text-[1.75rem] leading-[1.25] text-ink sm:text-3xl lg:text-[2.6rem] lg:leading-[1.2]">

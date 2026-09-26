@@ -10,12 +10,24 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AccessibilityRouteImport } from './routes/accessibility'
+import { Route as LegalNoticeRouteImport } from './routes/legal-notice'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as TermsOfUseRouteImport } from './routes/terms-of-use'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AccessibilityRoute = AccessibilityRouteImport.update({
+  id: '/accessibility',
+  path: '/accessibility',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalNoticeRoute = LegalNoticeRouteImport.update({
+  id: '/legal-notice',
+  path: '/legal-notice',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
@@ -31,30 +43,54 @@ const TermsOfUseRoute = TermsOfUseRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/accessibility': typeof AccessibilityRoute
+  '/legal-notice': typeof LegalNoticeRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/terms-of-use': typeof TermsOfUseRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/accessibility': typeof AccessibilityRoute
+  '/legal-notice': typeof LegalNoticeRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/terms-of-use': typeof TermsOfUseRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/accessibility': typeof AccessibilityRoute
+  '/legal-notice': typeof LegalNoticeRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/terms-of-use': typeof TermsOfUseRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/privacy-policy' | '/terms-of-use'
+  fullPaths:
+    | '/'
+    | '/accessibility'
+    | '/legal-notice'
+    | '/privacy-policy'
+    | '/terms-of-use'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/privacy-policy' | '/terms-of-use'
-  id: '__root__' | '/' | '/privacy-policy' | '/terms-of-use'
+  to:
+    | '/'
+    | '/accessibility'
+    | '/legal-notice'
+    | '/privacy-policy'
+    | '/terms-of-use'
+  id:
+    | '__root__'
+    | '/'
+    | '/accessibility'
+    | '/legal-notice'
+    | '/privacy-policy'
+    | '/terms-of-use'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AccessibilityRoute: typeof AccessibilityRoute
+  LegalNoticeRoute: typeof LegalNoticeRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   TermsOfUseRoute: typeof TermsOfUseRoute
 }
@@ -66,6 +102,20 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/accessibility': {
+      id: '/accessibility'
+      path: '/accessibility'
+      fullPath: '/accessibility'
+      preLoaderRoute: typeof AccessibilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal-notice': {
+      id: '/legal-notice'
+      path: '/legal-notice'
+      fullPath: '/legal-notice'
+      preLoaderRoute: typeof LegalNoticeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy-policy': {
@@ -87,6 +137,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AccessibilityRoute: AccessibilityRoute,
+  LegalNoticeRoute: LegalNoticeRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   TermsOfUseRoute: TermsOfUseRoute,
 }

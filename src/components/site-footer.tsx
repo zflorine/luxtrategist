@@ -17,6 +17,18 @@ export function SiteFooter() {
           >
             Terms of Use
           </Link>
+          <Link
+            to="/accessibility"
+            className="text-[10px] uppercase tracking-[0.3em] text-ink/40 transition-colors hover:text-turq"
+          >
+            Accessibility
+          </Link>
+          <Link
+            to="/legal-notice"
+            className="text-[10px] uppercase tracking-[0.3em] text-ink/40 transition-colors hover:text-turq"
+          >
+            Legal Notice
+          </Link>
           <span className="text-[10px] uppercase tracking-[0.3em] text-ink/40">
             © 2026 Florine ZHAO
           </span>

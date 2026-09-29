@@ -463,20 +463,38 @@ function Index() {
                   Request a quote
                 </span>
               </div>
-              <h2 className="mt-6 font-display text-4xl lg:text-5xl">
-                Share the decision, deliverable, or strategic question you need
-                reviewed.
+              <h2 className="mt-6 font-display text-4xl leading-[1.2] lg:text-5xl">
+                Complete the form.
               </h2>
-              <p className="mt-8 max-w-sm text-lg leading-relaxed text-white/60">
-                I review and challenge AI outputs, agency recommendations, and
-                strategic deliverables.
+              <p className="mt-8 max-w-md text-lg leading-relaxed text-white/60">
+                I’ll review it personally and get back to you within 48 business
+                hours.
               </p>
-              <div className="mt-10 space-y-4">
-                <p className="text-xs font-bold uppercase tracking-widest text-white/50">
-                  Fully independent
+
+              <div className="mt-10">
+                <p className="text-xs font-bold uppercase tracking-widest text-gold">
+                  What you can expect:
                 </p>
-                <p className="font-display text-xl">No implementation. No vendor interests.</p>
+                <ul className="mt-6 space-y-3">
+                  {[
+                    "Personal review — no intermediary",
+                    "Honest assessment of fit before commitment",
+                    "Confidentiality by design",
+                    "Clear, fixed scope",
+                    "Independent findings",
+                    "No implementation, no vendor interests",
+                    "No unnecessary process",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-4">
+                      <span className="mt-3 h-px w-4 shrink-0 bg-gold" aria-hidden="true" />
+                      <span className="text-[15px] leading-relaxed text-white/80">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </div>
+
             </div>
 
             <form className="space-y-10" onSubmit={handleSubmit}>

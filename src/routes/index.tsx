@@ -460,12 +460,13 @@ function Index() {
               <div className="inline-flex items-center gap-4">
                 <span className="h-px w-8 bg-gold" />
                 <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-gold">
-                  Request a quote
+                  Complete the form.
                 </span>
               </div>
               <h2 className="mt-6 font-display text-4xl leading-[1.2] lg:text-5xl">
-                Complete the form.
+                Request a quote
               </h2>
+
               <p className="mt-8 max-w-md text-lg leading-relaxed text-white/60">
                 I’ll review it personally and get back to you within 48 business
                 hours.

@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Cookie consent is managed once at the root through the shared consent provider so every route and footer uses the same versioned preference state.

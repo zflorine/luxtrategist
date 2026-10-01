@@ -16,27 +16,105 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Independent Strategic Review — Luxury & Beauty Advisory",
+        title:
+          "Independent Strategic Review — Luxury & Beauty Digital Strategy Advisory",
       },
       {
         name: "description",
         content:
-          "Independent strategic second opinions for executives in luxury, fashion and beauty. Reviewing AI outputs, agency recommendations and strategic deliverables.",
+          "Independent strategic reviews for premium and luxury brands navigating global growth and market localization. Challenging AI outputs, agency recommendations and strategic deliverables. 16 years of e-business experience across Louis Vuitton, Hermès, Dior, Moët Hennessy and Petit Bateau.",
       },
       {
+        name: "keywords",
+        content:
+          "strategic second opinion, digital strategy, AI strategy, luxury e-commerce, executive advisory, market localization, China digital strategy, brand premiumization, omnichannel strategy, conversion rate optimization",
+      },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { name: "geo.region", content: "FR" },
+      { name: "geo.placename", content: "Puteaux, France" },
+      {
         property: "og:title",
-        content: "Independent Strategic Review",
+        content:
+          "Independent Strategic Review — Luxury & Beauty Digital Strategy Advisory",
       },
       {
         property: "og:description",
         content:
-          "Independent strategic second opinions for executives in luxury, fashion and beauty. Reviewing AI outputs, agency recommendations and strategic deliverables.",
+          "Independent strategic reviews for premium and luxury brands navigating global growth and market localization. Challenging AI outputs, agency recommendations and strategic deliverables.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
+      { property: "og:locale", content: "en_US" },
+      { property: "og:locale:alternate", content: "fr_FR" },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:title",
+        content: "Independent Strategic Review — Luxury & Beauty Advisory",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Independent strategic reviews for premium and luxury brands navigating global growth and market localization.",
+      },
     ],
     links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "ProfessionalService",
+              "@id": "/#business",
+              name: "Independent Strategic Review",
+              description:
+                "Independent strategic reviews for premium and luxury brands navigating global growth and market localization, challenging AI outputs, agency recommendations, and strategic deliverables.",
+              url: "/",
+              founder: { "@id": "/#person" },
+              areaServed: "Worldwide",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "188 rue Gerhard",
+                postalCode: "92800",
+                addressLocality: "Puteaux",
+                addressCountry: "FR",
+              },
+              email: "zhao.partners@gmail.com",
+              knowsAbout: [
+                "Digital Strategy",
+                "AI Strategy",
+                "Luxury E-commerce",
+                "Market Localization",
+                "China Digital Strategy",
+                "Brand Premiumization",
+                "Omnichannel Strategy",
+                "Conversion Rate Optimization",
+                "Executive Advisory",
+              ],
+            },
+            {
+              "@type": "Person",
+              "@id": "/#person",
+              name: "Florine ZHAO",
+              jobTitle: "Independent Strategic Advisor",
+              description:
+                "16 years of e-business experience across fashion and luxury, including Louis Vuitton, Hermès, Dior, Moët Hennessy and Petit Bateau.",
+              worksFor: { "@id": "/#business" },
+              nationality: "French",
+            },
+            {
+              "@type": "WebSite",
+              "@id": "/#website",
+              url: "/",
+              name: "Independent Strategic Review",
+              publisher: { "@id": "/#business" },
+              inLanguage: "en",
+            },
+          ],
+        }),
+      },
+    ],
   }),
   component: Index,
 });

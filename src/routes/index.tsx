@@ -341,6 +341,10 @@ function Index() {
       {/* Expertise — word cloud */}
       <section id="expertise" className="scroll-mt-24 border-y border-ink/10">
         <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+          <div className="mb-12 text-center">
+            <h2 className="font-display text-4xl text-ink">Senior Expertise</h2>
+            <span className="mx-auto mt-4 block h-px w-12 bg-gold" />
+          </div>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-center font-display">
             {cloudKeywords.map((kw, i) => (
               <span

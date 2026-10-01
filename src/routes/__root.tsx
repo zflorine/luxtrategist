@@ -97,6 +97,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Independent strategic second opinions for executives in luxury, fashion and beauty.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Independent Strategic Review" },
+      { property: "og:locale", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

@@ -340,7 +340,7 @@ function Index() {
 
       {/* Expertise — word cloud */}
       <section id="expertise" className="scroll-mt-24 border-y border-ink/10">
-        <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+        <div className="mx-auto max-w-7xl px-6 pt-8 pb-8 lg:px-10">
           <div className="mb-12 text-center">
             <h2 className="font-display text-4xl text-ink">Senior Expertise</h2>
             <span className="mx-auto mt-4 block h-px w-12 bg-gold" />
@@ -364,7 +364,7 @@ function Index() {
       </section>
 
       {/* Engagements */}
-      <section id="engagements" className="scroll-mt-24 mx-auto max-w-7xl px-6 pt-24 pb-12 lg:px-10 lg:pt-32 lg:pb-16">
+      <section id="engagements" className="scroll-mt-24 mx-auto max-w-7xl px-6 pt-16 pb-12 lg:px-10 lg:pt-24 lg:pb-16">
         <div className="mb-16 text-center">
           <h2 className="font-display text-4xl text-ink">Core Engagements</h2>
           <span className="mx-auto mt-4 block h-px w-12 bg-gold" />
@@ -535,7 +535,7 @@ function Index() {
       </section>
 
       {/* Quote Form */}
-      <section id="request-quote" className="scroll-mt-24 bg-ink py-24 text-white lg:py-32">
+      <section id="request-quote" className="scroll-mt-24 bg-ink pb-24 text-white lg:pb-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="grid gap-16 lg:grid-cols-2">
             <div>

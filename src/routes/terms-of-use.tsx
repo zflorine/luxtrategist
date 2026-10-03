@@ -431,7 +431,7 @@ function TermsOfUsePage() {
       <SiteHeader />
 
       {/* Page */}
-      <article className="mx-auto max-w-3xl px-6 py-16 lg:px-10 lg:py-24">
+      <article id="main-content" tabIndex={-1} className="mx-auto max-w-3xl px-6 py-16 outline-none lg:px-10 lg:py-24">
         <Link
           to="/"
           className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-ink/50 transition-colors hover:text-turq"

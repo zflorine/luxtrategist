@@ -235,7 +235,7 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
             <Button
               type="button"
               variant="outline"
-              className="h-11 border-ink bg-ink text-white hover:bg-ink/85"
+              className="h-11 border-ink bg-ink text-[10px] font-bold uppercase tracking-[0.2em] text-white hover:bg-ink/85"
               onClick={() => saveConsent({ analytics: false, marketing: false })}
             >
               Reject all
@@ -243,14 +243,14 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
             <Button
               type="button"
               variant="outline"
-              className="h-11 border-ink bg-white text-ink hover:bg-ink hover:text-white"
+              className="h-11 border-ink bg-white text-[10px] font-bold uppercase tracking-[0.2em] text-ink hover:bg-ink hover:text-white"
               onClick={() => saveConsent({ analytics: true, marketing: true })}
             >
               Accept all
             </Button>
             <Button
               type="button"
-              className="h-11 bg-gold text-white hover:bg-ink"
+              className="h-11 bg-gold text-[10px] font-bold uppercase tracking-[0.2em] text-white hover:bg-ink"
               onClick={() => saveConsent(draft)}
             >
               Save choices

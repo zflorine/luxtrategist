@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Cookie consent is managed once at the root through the shared consent provider so every route and footer uses the same versioned preference state.
+- Global navigation and the skip link live in the shared site header so every route stays consistent and keyboard-accessible.

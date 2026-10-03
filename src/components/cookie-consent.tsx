@@ -147,7 +147,7 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
                 ref={firstActionRef}
                 type="button"
                 variant="outline"
-                className="h-11 border-ink bg-ink px-5 text-white hover:bg-ink/85"
+                className="h-11 border-ink bg-ink px-5 text-white uppercase tracking-[0.08em] hover:bg-ink/85"
                 onClick={() => saveConsent({ analytics: false, marketing: false })}
               >
                 Reject all
@@ -155,7 +155,7 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
               <Button
                 type="button"
                 variant="outline"
-                className="h-11 border-ink bg-white px-5 text-ink hover:bg-ink hover:text-white"
+                className="h-11 border-ink bg-white px-5 text-ink uppercase tracking-[0.08em] hover:bg-ink hover:text-white"
                 onClick={() => saveConsent({ analytics: true, marketing: true })}
               >
                 Accept all
@@ -163,7 +163,7 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
               <Button
                 type="button"
                 variant="outline"
-                className="h-11 border-gold bg-white px-5 text-ink hover:bg-gold hover:text-white"
+                className="h-11 border-gold bg-white px-5 text-ink uppercase tracking-[0.08em] hover:bg-gold hover:text-white"
                 onClick={openSettings}
               >
                 Manage choices

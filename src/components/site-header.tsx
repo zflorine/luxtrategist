@@ -85,7 +85,7 @@ export function SiteHeader() {
                     <Link
                       to="/"
                       hash={item.hash}
-                      className="border-b border-ink/10 py-6 font-display text-xl text-ink transition-colors hover:text-turq"
+                      className="border-b border-ink/10 py-6 text-[10px] font-bold uppercase tracking-[0.2em] text-ink transition-colors hover:text-turq"
                     >
                       {item.label}
                     </Link>

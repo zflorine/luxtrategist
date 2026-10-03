@@ -264,6 +264,11 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
 
 export function useCookieConsent() {
   const context = useContext(CookieConsentContext);
-  if (!context) throw new Error("useCookieConsent must be used within CookieConsentProvider");
+  if (!context) {
+    // Fallback (e.g. during hot reload) so the page never goes blank.
+    return {
+      openSettings: () => window.dispatchEvent(new CustomEvent("cookie-consent-open")),
+    } as unknown as CookieConsentContextValue;
+  }
   return context;
 }

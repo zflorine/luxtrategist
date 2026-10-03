@@ -264,7 +264,7 @@ function Index() {
       <SiteHeader />
 
       {/* Hero */}
-      <section id="top" className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-24">
+      <section id="main-content" tabIndex={-1} className="mx-auto max-w-7xl px-6 py-16 outline-none lg:px-10 lg:py-24">
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
             <div className="inline-flex items-center gap-4">

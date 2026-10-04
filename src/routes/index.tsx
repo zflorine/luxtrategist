@@ -285,7 +285,7 @@ function Index() {
                 Independent Strategic Review
               </span>
             </div>
-            <h1 className="mt-6 font-display text-[1.75rem] leading-[1.25] text-ink sm:text-3xl lg:text-[2.6rem] lg:leading-[1.2]">
+            <h1 className="mt-6 font-display text-[1.5rem] leading-[1.3] text-ink sm:text-2xl lg:text-[2.1rem] lg:leading-[1.25]">
               You already have the teams, agencies and AI tools.{" "}
               <span className="italic text-turq">What you may be missing</span>{" "}
               is an independent senior voice to challenge what they produce.

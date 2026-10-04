@@ -139,7 +139,7 @@ const flashBullets = [
   "Clear verdict: validate / challenge / revise",
   "Corrective recommendations",
   "1 debrief call",
-  "Target turnaround: 48 hours for standard-scope reviews. Complex or extensive materials are scoped separately.",
+  "Target turnaround: 48 hours for standard-scope reviews",
 ];
 
 const advisoryBullets = [
@@ -427,15 +427,6 @@ function Index() {
                 </li>
               ))}
             </ul>
-            <div className="mt-6 space-y-2 border-t border-white/15 pt-5">
-              <p className="text-xs leading-relaxed text-white/55">
-                Does not include: implementation, project management, recurring
-                team meetings, or production work.
-              </p>
-              <p className="text-xs leading-relaxed text-gold">
-                (Up to 8 hours/month of reserved senior advisory capacity)
-              </p>
-            </div>
             <Button
               type="button"
               onClick={() => requestQuote("Advisory")}
@@ -463,14 +454,6 @@ function Index() {
                 </li>
               ))}
             </ul>
-            <div className="mt-6 space-y-2 border-t border-ink/10 pt-5">
-              <p className="text-xs leading-relaxed text-ink/55">
-                Not a fractional CMO, project manager, or implementation lead.
-              </p>
-              <p className="text-xs leading-relaxed text-gold">
-                (Up to 28 hours/month of reserved senior advisory capacity)
-              </p>
-            </div>
             <Button
               type="button"
               variant="outline"

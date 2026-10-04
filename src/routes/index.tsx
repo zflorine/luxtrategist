@@ -511,7 +511,7 @@ function Index() {
               className="flex flex-col border border-ink/10 bg-white p-10 shadow-[0_20px_50px_-30px_rgba(20,32,31,0.35)]"
             >
               <blockquote className="flex-1">
-                <p className="font-display text-base italic leading-relaxed text-ink/85">
+                <p className="font-display text-[14px] italic leading-relaxed text-ink/85">
                   &ldquo;{t.quote}&rdquo;
                 </p>
               </blockquote>

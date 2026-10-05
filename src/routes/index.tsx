@@ -351,7 +351,7 @@ function Index() {
       <div aria-hidden="true" className="border-t border-ink/10" />
 
       {/* Engagements */}
-      <section id="engagements" className="scroll-mt-24 mx-auto max-w-7xl px-6 pt-16 pb-0 lg:px-10 lg:pt-24 lg:pb-0">
+      <section id="engagements" className="scroll-mt-24 mx-auto max-w-7xl px-6 pt-16 pb-16 lg:px-10 lg:pt-24 lg:pb-24">
         <div className="mb-16 text-center">
           <h2 className="font-display text-4xl text-ink">Core Engagements</h2>
           <span className="mx-auto mt-4 block h-px w-12 bg-gold" />
@@ -361,7 +361,6 @@ function Index() {
           <article className="group relative flex flex-col border border-ink/10 bg-white p-10 transition-all duration-500 hover:border-turq">
             <span className="mb-8 font-display text-4xl italic text-gold/30">01</span>
             <h3 className="font-display text-2xl text-ink">Flash</h3>
-            <p className="mt-2 font-display text-3xl text-gold">$3,000</p>
             <p className="mt-4 text-sm leading-relaxed text-ink/60">
               For a high-stakes decision requiring fast senior judgment.
             </p>
@@ -387,9 +386,6 @@ function Index() {
           <article className="group relative flex flex-col border border-ink bg-ink p-10 text-white shadow-2xl">
             <span className="mb-8 font-display text-4xl italic text-white/10">02</span>
             <h3 className="font-display text-2xl">Advisory</h3>
-            <p className="mt-2 font-display text-3xl text-gold">
-              $3,200+ <span className="text-lg text-white/50">/month</span>
-            </p>
             <p className="mt-4 text-sm leading-relaxed text-white/60">
               Your independent strategic second opinion, on a reserved basis.
             </p>
@@ -414,9 +410,6 @@ function Index() {
           <article className="group relative flex flex-col border border-ink/10 bg-white p-10 transition-all duration-500 hover:border-turq">
             <span className="mb-8 font-display text-4xl italic text-gold/30">03</span>
             <h3 className="font-display text-2xl text-ink">Partner</h3>
-            <p className="mt-2 font-display text-3xl text-gold">
-              $11,000+ <span className="text-lg text-ink/50">/month</span>
-            </p>
             <p className="mt-4 text-sm leading-relaxed text-ink/60">
               Your external strategic quality gate.
             </p>
@@ -438,26 +431,12 @@ function Index() {
             </Button>
           </article>
         </div>
-
-        {/* additional work */}
-        <div className="mt-6 px-8 py-5">
-          <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/55">
-              Additional work
-            </p>
-            <p className="mt-1.5 text-[12px] leading-relaxed text-ink/55">
-              Work outside the scope or reserved capacity of an engagement is
-              billed at $500/hour, subject to availability. Complex or extensive
-              reviews are scoped separately.
-            </p>
-          </div>
-        </div>
       </section>
 
       <div aria-hidden="true" className="border-t border-ink/10" />
 
       {/* Testimonials */}
-      <section id="testimonials" className="scroll-mt-24 mx-auto max-w-7xl px-6 pt-16 pb-0 lg:px-10 lg:pt-24 lg:pb-0">
+      <section id="testimonials" className="scroll-mt-24 mx-auto max-w-7xl px-6 pt-16 pb-16 lg:px-10 lg:pt-24 lg:pb-24">
         <div className="mb-16 text-center">
           <h2 className="font-display text-4xl text-ink">Testimonials</h2>
           <span className="mx-auto mt-4 block h-px w-12 bg-gold" />

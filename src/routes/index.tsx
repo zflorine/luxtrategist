@@ -469,7 +469,7 @@ function Index() {
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/55">
               Additional work
             </p>
-            <p className="mt-1.5 text-[12px] leading-relaxed text-ink/55 sm:whitespace-nowrap">
+            <p className="mt-1.5 text-[12px] leading-relaxed text-ink/55">
               Work outside the scope or reserved capacity of an engagement is
               billed at $500/hour, subject to availability. Complex or extensive
               reviews are scoped separately.

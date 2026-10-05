@@ -351,7 +351,7 @@ function Index() {
       <div aria-hidden="true" className="border-t border-ink/10" />
 
       {/* Engagements */}
-      <section id="engagements" className="scroll-mt-24 mx-auto max-w-7xl px-6 pt-16 pb-0 lg:px-10 lg:pt-24 lg:pb-0">
+      <section id="engagements" className="scroll-mt-24 mx-auto max-w-7xl px-6 pt-16 pb-16 lg:px-10 lg:pt-24 lg:pb-24">
         <div className="mb-16 text-center">
           <h2 className="font-display text-4xl text-ink">Core Engagements</h2>
           <span className="mx-auto mt-4 block h-px w-12 bg-gold" />

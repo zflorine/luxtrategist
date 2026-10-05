@@ -464,12 +464,12 @@ function Index() {
         </div>
 
         {/* additional work */}
-        <div className="mt-6 flex flex-col gap-3 border-y border-ink/10 px-8 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-8">
+        <div className="mt-6 border-b border-ink/10 px-8 py-5">
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/55">
               Additional work
             </p>
-            <p className="mt-1.5 max-w-[70ch] text-[12px] leading-relaxed text-ink/55">
+            <p className="mt-1.5 text-[12px] leading-relaxed text-ink/55 sm:whitespace-nowrap">
               Work outside the scope or reserved capacity of an engagement is
               billed at $500/hour, subject to availability. Complex or extensive
               reviews are scoped separately.

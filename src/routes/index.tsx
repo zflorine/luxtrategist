@@ -138,7 +138,6 @@ const flashBullets = [
   "Challenge of assumptions and recommendations",
   "Clear verdict: validate / challenge / revise",
   "Corrective recommendations",
-  "1 debrief call",
   "Target turnaround: 48 hours for standard-scope reviews",
 ];
 
@@ -388,8 +387,7 @@ function Index() {
             <h3 className="font-display text-2xl text-ink">Flash</h3>
             <p className="mt-2 font-display text-3xl text-gold">$3,000</p>
             <p className="mt-4 text-sm leading-relaxed text-ink/60">
-              For a high-stakes decision or deliverable requiring fast senior
-              judgment.
+              For a high-stakes decision requiring fast senior judgment.
             </p>
             <ul className="mt-6 space-y-3 text-sm text-ink/75">
               {flashBullets.map((b) => (
@@ -414,7 +412,7 @@ function Index() {
             <span className="mb-8 font-display text-4xl italic text-white/10">02</span>
             <h3 className="font-display text-2xl">Advisory</h3>
             <p className="mt-2 font-display text-3xl text-gold">
-              $3,200 <span className="text-lg text-white/50">/month</span>
+              $3,200+ <span className="text-lg text-white/50">/month</span>
             </p>
             <p className="mt-4 text-sm leading-relaxed text-white/60">
               Your independent strategic second opinion, on a reserved basis.
@@ -441,7 +439,7 @@ function Index() {
             <span className="mb-8 font-display text-4xl italic text-gold/30">03</span>
             <h3 className="font-display text-2xl text-ink">Partner</h3>
             <p className="mt-2 font-display text-3xl text-gold">
-              $11,000 <span className="text-lg text-ink/50">/month</span>
+              $11,000+ <span className="text-lg text-ink/50">/month</span>
             </p>
             <p className="mt-4 text-sm leading-relaxed text-ink/60">
               Your external strategic quality gate.
@@ -477,9 +475,6 @@ function Index() {
               reviews are scoped separately.
             </p>
           </div>
-          <span className="font-display shrink-0 text-lg text-gold/80">
-            $500<span className="text-xs text-ink/40">/hour</span>
-          </span>
         </div>
       </section>
 

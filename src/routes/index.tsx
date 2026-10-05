@@ -348,6 +348,8 @@ function Index() {
         </div>
       </section>
 
+      <div aria-hidden="true" className="border-t border-ink/10" />
+
       {/* Engagements */}
       <section id="engagements" className="scroll-mt-24 mx-auto max-w-7xl px-6 pt-16 pb-0 lg:px-10 lg:pt-24 lg:pb-0">
         <div className="mb-16 text-center">
@@ -438,7 +440,7 @@ function Index() {
         </div>
 
         {/* additional work */}
-        <div className="mt-6 border-b border-ink/10 px-8 py-5">
+        <div className="mt-6 px-8 py-5">
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/55">
               Additional work
@@ -451,6 +453,8 @@ function Index() {
           </div>
         </div>
       </section>
+
+      <div aria-hidden="true" className="border-t border-ink/10" />
 
       {/* Testimonials */}
       <section id="testimonials" className="scroll-mt-24 mx-auto max-w-7xl px-6 pt-16 pb-0 lg:px-10 lg:pt-24 lg:pb-0">
@@ -501,7 +505,7 @@ function Index() {
       </section>
 
       {/* Expertise — word cloud */}
-      <section id="expertise" className="scroll-mt-24 border-y border-ink/10">
+      <section id="expertise" className="scroll-mt-24 border-t border-ink/10">
         <div className="mx-auto max-w-7xl px-6 pt-16 pb-8 lg:px-10 lg:pt-24">
           <div className="mb-12 text-center">
             <h2 className="font-display text-4xl text-ink">Senior Expertise</h2>

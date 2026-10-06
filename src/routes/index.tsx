@@ -485,7 +485,7 @@ function Index() {
 
       {/* Expertise — word cloud */}
       <section id="expertise" className="scroll-mt-24 border-t border-ink/10">
-        <div className="mx-auto max-w-7xl px-6 pt-16 pb-8 lg:px-10 lg:pt-24">
+        <div className="mx-auto max-w-7xl px-6 pt-16 pb-16 lg:px-10 lg:pt-24 lg:pb-24">
           <div className="mb-12 text-center">
             <h2 className="font-display text-4xl text-ink">Senior Expertise</h2>
             <span className="mx-auto mt-4 block h-px w-12 bg-gold" />

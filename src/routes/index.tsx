@@ -360,7 +360,7 @@ function Index() {
           {/* Flash */}
           <article className="group relative flex flex-col border border-ink/10 bg-white p-10 transition-all duration-500 hover:border-turq">
             <span className="mb-8 font-display text-4xl italic text-gold/30">01</span>
-            <h3 className="font-display text-2xl text-ink">Flash</h3>
+            <h3 className="font-display text-2xl text-gold">Flash</h3>
             <p className="mt-4 text-sm leading-relaxed text-ink/60">
               For a high-stakes decision requiring fast senior judgment.
             </p>
@@ -409,7 +409,7 @@ function Index() {
           {/* Partner */}
           <article className="group relative flex flex-col border border-ink/10 bg-white p-10 transition-all duration-500 hover:border-turq">
             <span className="mb-8 font-display text-4xl italic text-gold/30">03</span>
-            <h3 className="font-display text-2xl text-ink">Partner</h3>
+            <h3 className="font-display text-2xl text-gold">Partner</h3>
             <p className="mt-4 text-sm leading-relaxed text-ink/60">
               Your external strategic quality gate.
             </p>

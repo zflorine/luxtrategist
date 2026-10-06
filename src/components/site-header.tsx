@@ -16,9 +16,9 @@ import {
 } from "@/components/ui/sheet";
 
 const navItems = [
-  { label: "Expertise", hash: "expertise" },
   { label: "Engagements", hash: "engagements" },
   { label: "Testimonials", hash: "testimonials" },
+  { label: "Expertise", hash: "expertise" },
 ];
 
 export function SiteHeader() {

@@ -385,7 +385,7 @@ function Index() {
           {/* Advisory (featured) */}
           <article className="group relative flex flex-col border border-ink bg-ink p-10 text-white shadow-2xl">
             <span className="mb-8 font-display text-4xl italic text-white/10">02</span>
-            <h3 className="font-display text-2xl">Advisory</h3>
+            <h3 className="font-display text-2xl text-gold">Advisory</h3>
             <p className="mt-4 text-sm leading-relaxed text-white/60">
               Your independent strategic second opinion, on a reserved basis.
             </p>

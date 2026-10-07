@@ -50,14 +50,14 @@ export const Route = createFileRoute("/")({
       {
         property: "og:image",
         content:
-          "https://id-preview--c51a0626-aac5-452e-a12d-3956d493b138.lovable.app/og-image.jpg",
+          "https://luxtrategist.lovable.app/og-image.jpg",
       },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       {
         name: "twitter:image",
         content:
-          "https://id-preview--c51a0626-aac5-452e-a12d-3956d493b138.lovable.app/og-image.jpg",
+          "https://luxtrategist.lovable.app/og-image.jpg",
       },
       {
         name: "twitter:title",

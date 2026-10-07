@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 
+import { LinkedInLink } from "@/components/linkedin-link";
 import { Button } from "@/components/ui/button";
 import { useCookieConsent } from "@/components/cookie-consent";
 
@@ -42,6 +43,7 @@ export function SiteFooter() {
           >
             Cookie settings
           </Button>
+          <LinkedInLink className="text-ink/40" />
           <span className="text-[10px] uppercase tracking-[0.3em] text-ink/40">
             © 2026 Florine ZHAO
           </span>

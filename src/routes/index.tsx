@@ -1,5 +1,5 @@
 import { LinkedInLink } from "@/components/linkedin-link";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useState, type FormEvent } from "react";

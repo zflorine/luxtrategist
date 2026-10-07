@@ -40,6 +40,12 @@ export function SiteHeader() {
             />
           </Link>
           <nav className="hidden items-center gap-10 text-[10px] font-bold uppercase tracking-[0.2em] md:flex">
+            <Link
+              to="/about"
+              className="text-ink/70 transition-colors hover:text-turq"
+            >
+              About
+            </Link>
             {navItems.map((item) => (
               <Link
                 key={item.hash}
@@ -80,6 +86,14 @@ export function SiteHeader() {
                 <SheetDescription>Navigation</SheetDescription>
               </SheetHeader>
               <nav className="flex flex-col border-t border-ink/10" aria-label="Mobile navigation">
+                <SheetClose asChild>
+                  <Link
+                    to="/about"
+                    className="border-b border-ink/10 py-6 text-[10px] font-bold uppercase tracking-[0.2em] text-ink transition-colors hover:text-turq"
+                  >
+                    About
+                  </Link>
+                </SheetClose>
                 {navItems.map((item) => (
                   <SheetClose asChild key={item.hash}>
                     <Link

@@ -653,7 +653,8 @@ function Index() {
                 </div>
               </div>
               <p className="text-[10px] leading-relaxed text-white/40">
-                Your data is processed in line with the GDPR (EU), UK GDPR and Hong Kong PDPO. See our{" "}
+                Your information is handled with strict confidentiality in accordance
+                with global data protection standards. See our{" "}
                 <Link to="/privacy-policy" className="underline underline-offset-2 hover:text-gold">Privacy Policy</Link>.
               </p>
             </form>

@@ -652,7 +652,7 @@ function Index() {
                   )}
                 </div>
               </div>
-              <p className="text-[10px] leading-relaxed text-white/40">
+              <p className="text-xs leading-relaxed text-white/60">
                 Your information is handled with strict confidentiality in accordance
                 with global data protection standards. See our{" "}
                 <Link to="/privacy-policy" className="underline underline-offset-2 hover:text-gold">Privacy Policy</Link>.

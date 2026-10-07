@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { LinkedInLink } from "@/components/linkedin-link";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useState, type FormEvent } from "react";
@@ -148,6 +149,7 @@ const advisoryBullets = [
   "Async access via Slack/email, with requests acknowledged within 1–2 business days. Review timelines are agreed based on scope and complexity",
   "One strategic call per month",
   "3-month initial engagement, auto-renews monthly",
+  "Selective quarterly intake",
 ];
 
 const partnerBullets = [
@@ -157,6 +159,7 @@ const partnerBullets = [
   "Up to 2 strategic calls per month",
   "Participation in selected high-stakes meetings",
   "3-month initial engagement, auto-renews monthly",
+  "Selective quarterly intake",
 ];
 
 const cloudKeywords: {
@@ -342,6 +345,7 @@ function Index() {
                   Across fashion and luxury, including Louis Vuitton, Hermès,
                   Dior, Moët Hennessy and Petit Bateau.
                 </p>
+                <LinkedInLink className="mt-4" />
 
               </div>
             </div>
@@ -537,7 +541,7 @@ function Index() {
                   {[
                     "Personal review — no intermediary",
                     "Honest assessment of fit before commitment",
-                    "Confidentiality by design",
+                    "Strict confidentiality",
                     "Clear, fixed scope",
                     "Independent findings",
                     "No implementation, no vendor interests",
@@ -648,6 +652,10 @@ function Index() {
                   )}
                 </div>
               </div>
+              <p className="text-[10px] leading-relaxed text-white/40">
+                Your data is processed in line with the GDPR (EU), UK GDPR and Hong Kong PDPO. See our{" "}
+                <Link to="/privacy-policy" className="underline underline-offset-2 hover:text-gold">Privacy Policy</Link>.
+              </p>
             </form>
           </div>
         </div>

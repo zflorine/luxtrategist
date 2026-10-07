@@ -88,6 +88,7 @@ function LegalNoticePage() {
                 <p>Legal status: Entrepreneur individuel</p>
                 <p>SIRET: 527 890 677 00034</p>
                 <p>SIREN: 527 890 677</p>
+                <p>VAT: TVA non applicable, art. 293 B du CGI</p>
               </div>
             </div>
           </section>

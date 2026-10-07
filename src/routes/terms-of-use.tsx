@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const Route = createFileRoute("/terms-of-use")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Terms of Use — Independent Strategic Review" },

@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const Route = createFileRoute("/legal-notice")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Legal Notice — Independent Strategic Review" },

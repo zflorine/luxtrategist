@@ -13,6 +13,7 @@ import logoPetitBateau from "@/assets/logo-petitbateau.png";
 import florinePortrait from "@/assets/florine-portrait.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       {

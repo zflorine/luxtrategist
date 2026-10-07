@@ -7,6 +7,7 @@
 - [x] Ajouter un menu tiroir sur mobile
 - [x] Ajouter un lien d’évitement clavier sur toutes les pages
 - [x] Harmoniser les boutons du panneau de réglages des cookies
+- [x] Ajouter un lien « About » dans le menu
 
 # Ouverts
 

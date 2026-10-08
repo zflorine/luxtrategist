@@ -41,7 +41,8 @@ export function SiteHeader() {
           </Link>
           <nav className="hidden items-center gap-10 text-[10px] font-bold uppercase tracking-[0.2em] md:flex">
             <Link
-              to="/about"
+              to="/"
+              hash="main-content"
               className="text-ink/70 transition-colors hover:text-turq"
             >
               About
@@ -88,7 +89,8 @@ export function SiteHeader() {
               <nav className="flex flex-col border-t border-ink/10" aria-label="Mobile navigation">
                 <SheetClose asChild>
                   <Link
-                    to="/about"
+                    to="/"
+                    hash="main-content"
                     className="border-b border-ink/10 py-6 text-[10px] font-bold uppercase tracking-[0.2em] text-ink transition-colors hover:text-turq"
                   >
                     About

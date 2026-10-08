@@ -8,6 +8,7 @@
 - [x] Ajouter un lien d’évitement clavier sur toutes les pages
 - [x] Harmoniser les boutons du panneau de réglages des cookies
 - [x] Ajouter un lien « About » dans le menu
+- [ ] Corriger l'affichage de la page About après un clic depuis l'accueil
 
 # Ouverts
 
